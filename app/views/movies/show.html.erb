@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vimeo:</strong>
+  <%= @movie.vimeo_id %>
+</p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @movie.locale %>
+</p>
+
+<p>
+  <strong>Main:</strong>
+  <%= @movie.main %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>
