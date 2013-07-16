@@ -8,6 +8,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :test do
@@ -23,6 +24,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'vimeo'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

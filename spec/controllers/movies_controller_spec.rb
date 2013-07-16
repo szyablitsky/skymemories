@@ -19,11 +19,13 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe MoviesController do
+  
+  let(:movie) { FactoryGirl.create :movie }
 
   # This should return the minimal set of attributes required to create a valid
   # Movie. As you add validations to Movie, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "vimeo_id" => "1" } }
+  let(:valid_attributes) { FactoryGirl.attributes_for :movie }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -32,7 +34,7 @@ describe MoviesController do
 
   describe "GET index" do
     it "assigns all movies as @movies" do
-      movie = Movie.create! valid_attributes
+      #movie = Movie.create! valid_attributes
       get :index, {}, valid_session
       assigns(:movies).should eq([movie])
     end
@@ -40,7 +42,7 @@ describe MoviesController do
 
   describe "GET show" do
     it "assigns the requested movie as @movie" do
-      movie = Movie.create! valid_attributes
+      #movie = Movie.create! valid_attributes
       get :show, {:id => movie.to_param}, valid_session
       assigns(:movie).should eq(movie)
     end
@@ -55,7 +57,7 @@ describe MoviesController do
 
   describe "GET edit" do
     it "assigns the requested movie as @movie" do
-      movie = Movie.create! valid_attributes
+      #movie = Movie.create! valid_attributes
       get :edit, {:id => movie.to_param}, valid_session
       assigns(:movie).should eq(movie)
     end
@@ -101,7 +103,7 @@ describe MoviesController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested movie" do
-        movie = Movie.create! valid_attributes
+       # movie = Movie.create! valid_attributes
         # Assuming there are no other movies in the database, this
         # specifies that the Movie created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -111,13 +113,13 @@ describe MoviesController do
       end
 
       it "assigns the requested movie as @movie" do
-        movie = Movie.create! valid_attributes
+        #movie = Movie.create! valid_attributes
         put :update, {:id => movie.to_param, :movie => valid_attributes}, valid_session
         assigns(:movie).should eq(movie)
       end
 
       it "redirects to the movie" do
-        movie = Movie.create! valid_attributes
+        #movie = Movie.create! valid_attributes
         put :update, {:id => movie.to_param, :movie => valid_attributes}, valid_session
         response.should redirect_to(movie)
       end
@@ -125,7 +127,7 @@ describe MoviesController do
 
     describe "with invalid params" do
       it "assigns the movie as @movie" do
-        movie = Movie.create! valid_attributes
+        #movie = Movie.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Movie.any_instance.stub(:save).and_return(false)
         put :update, {:id => movie.to_param, :movie => { "vimeo_id" => "invalid value" }}, valid_session
@@ -133,7 +135,7 @@ describe MoviesController do
       end
 
       it "re-renders the 'edit' template" do
-        movie = Movie.create! valid_attributes
+        #movie = Movie.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Movie.any_instance.stub(:save).and_return(false)
         put :update, {:id => movie.to_param, :movie => { "vimeo_id" => "invalid value" }}, valid_session
@@ -144,14 +146,15 @@ describe MoviesController do
 
   describe "DELETE destroy" do
     it "destroys the requested movie" do
-      movie = Movie.create! valid_attributes
+      #movie = Movie.create! valid_attributes
+      movie.save
       expect {
         delete :destroy, {:id => movie.to_param}, valid_session
       }.to change(Movie, :count).by(-1)
     end
 
     it "redirects to the movies list" do
-      movie = Movie.create! valid_attributes
+      #movie = Movie.create! valid_attributes
       delete :destroy, {:id => movie.to_param}, valid_session
       response.should redirect_to(movies_url)
     end
