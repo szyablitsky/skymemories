@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :movie do
-    sequence (:vimeo_id) { |i| 100000000 + i }
+    sequence (:vimeo_id) { |i| 222111000 + i }
     locale 'ru'
     main true#, false
 	
