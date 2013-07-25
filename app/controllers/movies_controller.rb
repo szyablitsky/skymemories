@@ -1,24 +1,29 @@
 class MoviesController < ApplicationController
+
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
 
   # GET /movies
   # GET /movies.json
   def index
     @movies = Movie.all
+    @page_title = 'Movies'
   end
 
   # GET /movies/1
   # GET /movies/1.json
   def show
+    @page_title = "Movie: #{@movie.vimeo_id.to_s}"
   end
 
   # GET /movies/new
   def new
     @movie = Movie.new
+    @page_title = 'Create new movie'
   end
 
   # GET /movies/1/edit
   def edit
+    @page_title = "Edit movie: #{@movie.vimeo_id}"
   end
 
   # POST /movies

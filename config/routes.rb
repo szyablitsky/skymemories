@@ -1,7 +1,11 @@
 Skymemories::Application.routes.draw do
+  
+  get "site/home"
+  
+  resources :movies
+
   resources :users
 
-  resources :movies
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
