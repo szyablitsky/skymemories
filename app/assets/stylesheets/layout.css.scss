@@ -1,0 +1,26 @@
+@import 'constants';
+
+body {
+  background: image-url('paper.png') repeat #f1f1f1;
+  color: $main-color;
+  font-family: $main-font-family;
+  font-size: $main-font-size;
+  line-height: $main-line-height;
+}
+
+.container {
+  margin: 0 auto;
+  width: $normal-width;
+}
+
+#page_header {
+  margin-top: 10px;
+  #utility {
+    float: right;
+  }
+  #logo {
+    a {
+      text-decoration: none;
+    }
+  }
+}

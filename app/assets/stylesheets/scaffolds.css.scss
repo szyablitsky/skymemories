@@ -1,34 +1,3 @@
-body {
-  background: image-url('paper.png') repeat #f1f1f1;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 21px;
-}
-
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 21px;
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 16px;
-}
-
-a {
-  color: #000;
-  &:visited {
-    color: #666;
-  }
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
-
 div {
   &.field, &.actions {
     margin-bottom: 10px;
