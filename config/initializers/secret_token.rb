@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Skymemories::Application.config.secret_key_base = 'ae24c95986ee02522e1e0f9a69ea9e1e15f978612f2fdae7cd4b48dfd09ee5e5eeff5c468a7a3dfcba2bc660b1c64a1e61f785405be7a3c80eaa64ff4933219d'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+Skymemories::Application.config.secret_key_base = secure_token

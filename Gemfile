@@ -6,21 +6,27 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'guard-rspec'
 end
 
-#group :production do
+group :production do
 #  gem 'pg', '0.12.2'
-#end
+end
 
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'simplecov'
   gem 'shoulda-matchers'
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'guard-spork'
+  gem 'spork'
 end
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
+  gem 'compass-rails'
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.0.0'
 end
