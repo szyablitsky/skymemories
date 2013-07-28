@@ -9,5 +9,5 @@ class Movie < ActiveRecord::Base
 
   scope :main, lambda { where('main=?',true) }
   scope :other, lambda { where('main<>?',true) }
-
+  
 end
