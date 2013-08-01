@@ -13,7 +13,7 @@ body {
   width: $normal-width;
 }
 
-header#page_header {
+header#page-header {
   margin-top: 2em;
   #utility {
     float: right;
@@ -23,13 +23,22 @@ header#page_header {
     }
   }
   #logo {
-    a {
-      text-decoration: none;
+    text-decoration: none;
+    font-family: serif;
+    .brand-name {
+      color: $hilight-dense-color;
+      font-size: 3em;
+      line-height: 1.5em;
+    }
+    .tag-line {
+      color: $hilight-loose-color;
+      font-size: 1.5em;
+      line-height: 1.5em;
     }
   }
 }
 
-footer#page_footer {
+footer#page-footer {
   font-size: 0.8em;
   height: 100px;
   padding: 10px 20px;

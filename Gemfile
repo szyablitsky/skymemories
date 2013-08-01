@@ -20,8 +20,9 @@ group :test do
   gem 'shoulda-matchers'
   gem 'rb-inotify'
   gem 'libnotify'
+  gem 'spork', '~> 1.0rc'
   gem 'guard-spork'
-  gem 'spork'
+  gem 'childprocess', '0.3.6'
 end
 
 group :assets do
