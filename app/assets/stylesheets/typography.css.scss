@@ -1,0 +1,16 @@
+@import 'constants';
+
+h1, th {
+  font-family: $header-font-family;
+}
+
+input.button {
+  padding: 7px 14px 10px;
+  color: white;
+  border: 0;
+  height: 36px;
+  background-color: #429ACC;
+  border-radius: 10px;
+  font-family: $header-font-family;
+  text-shadow: 1px 1px 1px rgba(88,88,88,.4);
+}

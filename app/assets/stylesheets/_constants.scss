@@ -2,9 +2,11 @@
 // Typography
 // --------------------------------------------------------------------------
 $main-color:       #5f5f5f;
-$main-font-family: verdana, arial, helvetica, sans-serif;
+$main-font-family: 'PT Serif', serif;
 $main-font-size:   16px;
 $main-line-height: $main-font-size * 1.5;
+
+$header-font-family: 'Ubuntu', sans-serif;
 
 $hilight-dense-color: #77f;
 $hilight-loose-color: lighten($hilight-dense-color,10%);

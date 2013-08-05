@@ -1,0 +1,36 @@
+@import 'constants';
+
+header#page-header {
+  margin-top: 2em;
+  #utility {
+    float: right;
+    font-size: 0.8em;
+    font-family: $header-font-family;
+    p {
+      margin: 0;
+    }
+  }
+  .container {
+    position: relative;
+  }
+  #main-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-family: $header-font-family;
+  }
+  #logo {
+    text-decoration: none;
+    .brand-name {
+      color: $hilight-dense-color;
+      font-weight: 700;
+      font-size: 3em;
+      line-height: 1.5em;
+    }
+    .tag-line {
+      color: $hilight-loose-color;
+      font-size: 1.5em;
+      line-height: 1.5em;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 Skymemories::Application.routes.draw do
   
-  get "site/home"
+  get "pages/home"
+  
+  get '/contact', to: 'pages#contact'
   
   resources :movies
 
