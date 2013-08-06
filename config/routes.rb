@@ -1,7 +1,7 @@
 Skymemories::Application.routes.draw do
   
-  get "pages/home"
-  
+  root 'pages#home'
+
   get '/contact', to: 'pages#contact'
   
   resources :movies
