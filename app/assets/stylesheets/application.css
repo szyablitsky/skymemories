@@ -4,6 +4,7 @@
  *= require typography
  *= require layout
  *= require header
+ *= require flash
  *= require footer
  *= require scaffolds
  *= require site
