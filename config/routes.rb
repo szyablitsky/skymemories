@@ -6,6 +6,8 @@ Skymemories::Application.routes.draw do
   
   resources :movies
   resources :posts
-  resources :users
+
+  get 'users/new'
+  get 'register', to: 'users#new'
 
 end
