@@ -1,12 +1,13 @@
-<h1>Listing posts</h1>
+<% provide :title, "Статьи" %>
+<h1>Статьи</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Published</th>
-      <th>User</th>
+      <th>Заголовок</th>
+      <th>Текст</th>
+      <th>Публиковать</th>
+      <th>Пользователь</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,9 +21,9 @@
         <td><%= post.body %></td>
         <td><%= post.published %></td>
         <td><%= post.user_id %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Просмотр', post %></td>
+        <td><%= link_to 'Редактирование', edit_post_path(post) %></td>
+        <td><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Удалить статью?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Добавить статью', new_post_path %>

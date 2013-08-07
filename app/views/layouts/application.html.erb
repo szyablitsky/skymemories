@@ -18,5 +18,12 @@
 
 <%= render 'layouts/footer' %>
 
+<%= if Rails.env.development? 
+      content_tag :div, class: "container" do
+        debug(params)
+      end
+    end
+%>
+
 </body>
 </html>

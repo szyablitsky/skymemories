@@ -1,12 +1,14 @@
 /*
  *= require_self
  *= require normalize
+
  *= require typography
  *= require layout
  *= require header
  *= require flash
  *= require footer
- *= require scaffolds
+ *= require forms
+
  *= require site
  *= require movies
  *= require users

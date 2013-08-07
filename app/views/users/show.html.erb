@@ -1,0 +1,6 @@
+<% provide(:title, "Пользователь #{@user.name}") %>
+<h1>Пользователь</h1>
+<p>
+  <%= gravatar_image_tag(@user.email, alt: @user.name, class: 'gravatar') %>
+  <%= "#{@user.name}, #{@user.email}" %>
+</p>

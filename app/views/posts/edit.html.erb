@@ -1,6 +1,7 @@
-<h1>Editing post</h1>
+<% provide :title, "Редактирование статьи" %>
+<h1>Редактирование статьи</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Просмотреть', @post %> |
+<%= link_to 'Назад', posts_path %>

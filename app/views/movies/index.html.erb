@@ -1,12 +1,12 @@
-<% provide :title, 'Movies' %>
+<% provide :title, 'Фильмы' %>
 <h1>Фильмы</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Vimeo</th>
-      <th>Locale</th>
-      <th>Main</th>
+      <th>Vimeo ID</th>
+      <th>Язык</th>
+      <th>Основной</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,9 +19,9 @@
         <td><%= movie.vimeo_id %> </td>
         <td><%= movie.locale %></td>
         <td><%= movie.main %></td>
-        <td><%= link_to 'Show', movie %></td>
-        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Просмотр', movie %></td>
+        <td><%= link_to 'Редактирование', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Удалить', movie, method: :delete, data: { confirm: 'Удалить фильм?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Movie', new_movie_path %>
+<%= link_to 'Добавить фильм', new_movie_path %>

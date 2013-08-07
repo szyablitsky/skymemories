@@ -13,10 +13,7 @@ describe User do
   it { should validate_presence_of :email }
 #  it { should validate_uniqueness_of(:email).case_insensitive }
 
-  let(:user) do
-    User.new( name: 'Smith', email: 'test@test.com',
-              password: 'foobar', password_confirmation: 'foobar' )
-  end
+  let(:user) { FactoryGirl.create(:user) }
 
   describe "email address with mixed case" do
     let(:mixed_case_email) { "Foo@ExAMPle.CoM" }

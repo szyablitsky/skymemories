@@ -2,13 +2,23 @@
 
 body {
   background: image-url('paper.png') repeat #f1f1f1;
-  color: $main-color;
-  font-family: $main-font-family;
-  font-size: $main-font-size;
-  line-height: $main-line-height;
 }
 
 .container {
   margin: 0 auto;
   width: $normal-width;
+}
+
+// debug =======================================
+
+$grayMediumLight: #eaeaea;
+
+.debug_dump {
+  margin-top: 45px;
+  background-color: $grayMediumLight;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.8em;
+  line-height: 1.3em;
+  border: solid gray 1px;
 }

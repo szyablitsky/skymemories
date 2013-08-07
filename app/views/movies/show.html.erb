@@ -1,18 +1,20 @@
-<% provide :title, "Movie #{@movie.vimeo_id}" %>
+<% provide :title, "Фильм #{@movie.vimeo_id}" %>
+<h1>Фильм</h1>
+
 <p>
-  <strong>Vimeo:</strong>
+  <strong>Vimeo ID:</strong>
   <%= @movie.vimeo_id %>
 </p>
 
 <p>
-  <strong>Locale:</strong>
+  <strong>Язык:</strong>
   <%= @movie.locale %>
 </p>
 
 <p>
-  <strong>Main:</strong>
+  <strong>Основной:</strong>
   <%= @movie.main %>
 </p>
 
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<%= link_to 'Редактировать', edit_movie_path(@movie) %> |
+<%= link_to 'Назад', movies_path %>
