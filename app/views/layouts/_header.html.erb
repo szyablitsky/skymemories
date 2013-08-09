@@ -2,9 +2,14 @@
   <div class="container">
     <nav id="utility">
       <p>
-        Вы вошли как <strong>Зайчик-побегайчик</strong>
-        <%= link_to "[Ваш профиль]", "#" %> |
-        <%= link_to "[Выйти]", "#" %>
+        <% if signed_in? %>
+          Вы вошли как <strong><%= current_user.name %></strong>
+          <%= link_to "[Ваш профиль]", current_user %> |
+          <%= link_to "[Выйти]", logout_path, method: "delete" %>
+        <% else %>
+          <%= link_to "[Вход]", login_path %> |
+          <%= link_to "[Регистрация]", register_path %>
+        <% end %>
       </p>
     </nav>
     <%= link_to root_path, id: "logo" do %>
@@ -15,7 +20,6 @@
     <nav id="main-nav">
       <%= link_to "Фильмы", movies_path %> |
       <%= link_to "Статьи", posts_path %> |
-      <%= link_to "Регистрация", register_path %> |
       <%= link_to "Контакты", contact_path %>
     </nav>
   </div>

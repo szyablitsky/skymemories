@@ -1,10 +1,11 @@
-* проверка стойкости пароля http://antelle.github.io/passfield/
-* подсказка если адрес неверный https://github.com/Kicksend/mailcheck
-* комментарии http://disqus.com/
-* тэги https://github.com/mbleigh/acts-as-taggable-on
-* расшаривание http://addthis.com/
-* разбиение на страницы https://github.com/mislav/will_paginate/wiki
-* человекочитаемые адреса https://github.com/norman/friendly_id
-* markdown https://github.com/tanoku/redcarpet
-* rails testing http://everydayrails.com/archives.html
-* подержка русского языка https://github.com/yaroslav/russian
+* [проверка стойкости пароля](http://antelle.github.io/passfield/)
+* [подсказка если адрес неверный](https://github.com/Kicksend/mailcheck)
+* [комментарии](http://disqus.com/)
+* [тэги](https://github.com/mbleigh/acts-as-taggable-on)
+* [расшаривание](http://addthis.com/)
+* [разбиение на страницы](https://github.com/mislav/will_paginate/wiki)
+* [человекочитаемые адреса](https://github.com/norman/friendly_id)
+* [markdown](https://github.com/tanoku/redcarpet)
+* [rails testing](http://everydayrails.com/archives.html)
+* [подержка русского языка](https://github.com/yaroslav/russian)
+* [recaptcha](https://github.com/ambethia/recaptcha)

@@ -5,8 +5,12 @@ Skymemories::Application.routes.draw do
   
   resources :movies
   resources :posts
+  
   resources :users
-
-  get 'register', to: 'users#new'
+  match 'register', to: 'users#new', via: :get
+  
+  resources :sessions, only: [:new, :create, :destroy]
+  match 'login',  to: 'sessions#new', via: :get
+  match 'logout', to: 'sessions#destroy', via: :delete
 
 end
