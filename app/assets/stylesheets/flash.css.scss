@@ -1,22 +1,25 @@
-#notice {
-  background-color: rgba(0,255,0,.15);
-  color: green;
-  padding: 10px 15px;
-  border-radius: 10px;
+.alert {
+  padding: 10px 35px 10px 15px;
+  margin-bottom: 20px;
+  color: #c09853;
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  border-radius: 4px;
+  .close {
+    position: relative;
+    right: -21px;
+    color: inherit;
+  }
 }
 
-.flash-message {
-  color: black;
-  border-radius: 5px;
-  &.error {
-    border: solid 1px #900;
-    background-color: #FF6565;
-  }
-  &.notice {
-    border: solid 1px #26722D;
-    background-color: #A4E7A0;
-  }
-  p {
-    margin: 10px 15px;
-  }
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+.alert-success {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
 }

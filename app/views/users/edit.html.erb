@@ -1,0 +1,47 @@
+<% provide(:title, "Ваш профиль") %>
+<h1>Ваш профиль</h1>
+
+<%= form_for(@user) do |f| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "ошибка") %>
+        не позволяют(ет) сохранить изменения в вашем профиле:
+      </h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "Имя пользователя" %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "Адрес электронной почты" %><br />
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "Пароль" %><br />
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "Подтверждение пароля" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Сохранить изменения", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= gravatar_for(@user) %>
+<a href="http://gravatar.com/emails">изменить</a>

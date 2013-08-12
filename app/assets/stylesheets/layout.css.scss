@@ -4,6 +4,17 @@ body {
   background: image-url('paper.png') repeat #f1f1f1;
 }
 
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 .container {
   margin: 0 auto;
   width: $normal-width;

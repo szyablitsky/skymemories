@@ -5,9 +5,10 @@
  *= require typography
  *= require layout
  *= require header
+ *= require forms
  *= require flash
  *= require footer
- *= require forms
+ *= require pagination
 
  *= require site
  *= require movies

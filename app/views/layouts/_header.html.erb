@@ -3,8 +3,9 @@
     <nav id="utility">
       <p>
         <% if signed_in? %>
-          Вы вошли как <strong><%= current_user.name %></strong>
+          Вы вошли как <strong><%= current_user.name %></strong><br />
           <%= link_to "[Ваш профиль]", current_user %> |
+          <%= link_to "[Настройка]", edit_user_path(current_user) %> |
           <%= link_to "[Выйти]", logout_path, method: "delete" %>
         <% else %>
           <%= link_to "[Вход]", login_path %> |
@@ -20,6 +21,7 @@
     <nav id="main-nav">
       <%= link_to "Фильмы", movies_path %> |
       <%= link_to "Статьи", posts_path %> |
+      <%= link_to "Пользователи", users_path %> |
       <%= link_to "Контакты", contact_path %>
     </nav>
   </div>

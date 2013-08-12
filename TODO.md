@@ -3,7 +3,6 @@
 * [комментарии](http://disqus.com/)
 * [тэги](https://github.com/mbleigh/acts-as-taggable-on)
 * [расшаривание](http://addthis.com/)
-* [разбиение на страницы](https://github.com/mislav/will_paginate/wiki)
 * [человекочитаемые адреса](https://github.com/norman/friendly_id)
 * [markdown](https://github.com/tanoku/redcarpet)
 * [rails testing](http://everydayrails.com/archives.html)

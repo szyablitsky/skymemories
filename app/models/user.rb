@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  self.per_page = 10
+
   before_save { email.downcase! }
   before_create :create_remember_token
 

@@ -20,4 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
-  hello: "привет"
+  will_paginate:
+    previous_label: "&laquo;"
+    next_label: "&raquo;"

@@ -7,6 +7,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'guard-rspec'
+  gem 'faker'
 end
 
 group :production do
@@ -39,6 +40,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'vimeo'
 gem 'gravatar_image_tag'
+gem 'will_paginate'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
