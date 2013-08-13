@@ -1,32 +1,10 @@
 <% provide :title, 'Фильмы' %>
 <h1>Фильмы</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Vimeo ID</th>
-      <th>Язык</th>
-      <th>Основной</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @movies.each do |movie| %>
-      <tr>
-        <td><%= movie.vimeo_id %> </td>
-        <td><%= movie.locale %></td>
-        <td><%= movie.main %></td>
-        <td><%= link_to 'Просмотр', movie %></td>
-        <td><%= link_to 'Редактирование', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Удалить', movie, method: :delete, data: { confirm: 'Удалить фильм?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<% @locale_groups.each do |locale, movies| %>
+  <section class="locale">
+    <%= render movies %>
+  </section>
+<% end %>
 
 <%= link_to 'Добавить фильм', new_movie_path %>

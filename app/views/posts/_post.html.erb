@@ -1,0 +1,9 @@
+<article>
+  <h2><%= post.title %></h2>
+  <%= post.content %>
+  <p class="small">
+    <%= post.user.name %>
+    <%= time_ago_in_words post.created_at %> назад
+    <%= Russian::strftime post.created_at, "(%e %B %Y в %R)" %>
+  </p>
+</article>

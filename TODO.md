@@ -8,3 +8,4 @@
 * [rails testing](http://everydayrails.com/archives.html)
 * [подержка русского языка](https://github.com/yaroslav/russian)
 * [recaptcha](https://github.com/ambethia/recaptcha)
+* [simple form](https://github.com/plataformatec/simple_form)

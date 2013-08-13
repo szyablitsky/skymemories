@@ -7,6 +7,11 @@ body {
   line-height: $main-line-height;
 }
 
-h1, th {
+h1, h2, th {
   font-family: $header-font-family;
+}
+
+.small {
+  font-size: 0.75em;
+  line-height: 1.5em;
 }

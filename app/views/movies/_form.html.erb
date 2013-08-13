@@ -13,18 +13,18 @@
 
 
   <div class="field">
-    <%= f.label :vimeo_id, 'Vimeo ID' %><br>
+    <%= f.label :vimeo_id, "Vimeo ID" %><br>
     <%= f.number_field :vimeo_id %>
   </div>
   <div class="field">
-    <%= f.label :locale, 'Язык' %><br>
+    <%= f.label :locale, "Язык" %><br>
     <%= f.text_field :locale %>
   </div>
   <div class="field">
-    <%= f.label :main, 'Основной' %><br>
+    <%= f.label :main, "Основной" %><br>
     <%= f.check_box :main %>
   </div>
   <div class="actions">
-    <%= f.submit class: 'btn' %>
+    <%= f.submit "Сохранить", class: "btn btn-primary" %>
   </div>
 <% end %>

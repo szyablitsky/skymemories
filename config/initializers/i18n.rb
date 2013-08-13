@@ -1,0 +1,1 @@
+LOCALES = %w( en ru he )

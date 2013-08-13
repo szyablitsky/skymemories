@@ -2,11 +2,12 @@ require 'spec_helper'
 
 describe "posts/show" do
   before(:each) do
+    @user = stub_model(User, name: 'User')
     @post = assign(:post, stub_model(Post,
       :title => "Title",
-      :body => "MyText",
+      :content => "MyText",
       :published => false,
-      :user_id => 1
+      :user => @user
     ))
   end
 
@@ -16,6 +17,6 @@ describe "posts/show" do
     rendered.should match(/Title/)
     rendered.should match(/MyText/)
     rendered.should match(/false/)
-    rendered.should match(/1/)
+    rendered.should match(/User/)
   end
 end

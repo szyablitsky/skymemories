@@ -1,0 +1,5 @@
+<div class="<%= movie_class(movie) %>">
+  <%= locale_for(movie) %>
+  <%= movie.vimeo_id %>
+  <%= link_to 'Удалить', movie, method: :delete, data: { confirm: 'Удалить фильм?' } %>
+</div>

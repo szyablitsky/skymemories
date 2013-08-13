@@ -24,6 +24,11 @@ module SessionsHelper
     user == current_user
   end
 
+  def signed_in_user
+    store_location
+    redirect_to login_url, notice: "Необходима авторизация" unless signed_in?
+  end
+
   def sign_out
     self.current_user = nil
     cookies.delete(:remember_token)

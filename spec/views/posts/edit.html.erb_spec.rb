@@ -4,7 +4,7 @@ describe "posts/edit" do
   before(:each) do
     @post = assign(:post, stub_model(Post,
       :title => "MyString",
-      :body => "MyText",
+      :content => "MyText",
       :published => false,
       :user_id => 1
     ))
@@ -16,7 +16,7 @@ describe "posts/edit" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form[action=?][method=?]", post_path(@post), "post" do
       assert_select "input#post_title[name=?]", "post[title]"
-      assert_select "textarea#post_body[name=?]", "post[body]"
+      assert_select "textarea#post_content[name=?]", "post[content]"
       assert_select "input#post_published[name=?]", "post[published]"
       assert_select "input#post_user_id[name=?]", "post[user_id]"
     end

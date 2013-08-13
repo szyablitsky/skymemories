@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   before_save { email.downcase! }
   before_create :create_remember_token
 
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
   has_secure_password
   validates :password, length: { minimum: 6 }

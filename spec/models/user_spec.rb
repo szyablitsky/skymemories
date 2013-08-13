@@ -25,4 +25,8 @@ describe User do
     end
   end
 
+  it "has a valid factory" do
+    user.should be_valid
+  end
+
 end

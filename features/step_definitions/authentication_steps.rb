@@ -7,7 +7,7 @@ When(/^he submits invalid signin information$/) do
 end
 
 Then /^he should see an error message$/ do
-  expect(page).to have_selector('div.flash-message.error')
+  expect(page).to have_selector('div.alert.alert-error')
 end
 
 Given(/^the user has an account$/) do
@@ -15,7 +15,7 @@ Given(/^the user has an account$/) do
 end
 
 When(/^the user submits valid signin information$/) do
-  fill_in "Адрес",    with: @user.email
+  fill_in "Адрес", with: @user.email
   fill_in "Пароль", with: @user.password
   click_button "Войти"
 end
