@@ -1,6 +1,10 @@
-<% provide :title, 'Новый фильм' %>
+<% provide :title, "Новый фильм" %>
 <h1>Новый фильм</h1>
 
-<%= render 'form' %>
+<section class="videos">
+<% @videos.each do |v| %>
+  <%= render "video", video: v %>
+<% end %>
+</section>
 
-<%= link_to 'Назад', movies_path %>
+<%= link_to "Назад", movies_path %>

@@ -1,12 +1,18 @@
+require 'vimeo_helper'
+
 class MoviesController < ApplicationController
+
+  before_action :set_movie, only: [:edit, :update, :destroy]
 
   def index
     @locale_groups = Movie.group_by_locale
-    @movies = Movie.all
   end
 
   def new
-    @movie = Movie.new
+    @videos = VimeoHelper.videos
+  end
+
+  def edit
   end
 
   def create
@@ -23,9 +29,20 @@ class MoviesController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @movie.update(movie_params)
+        format.html { redirect_to movies_path, notice: 'Movie was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @movie.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
-    movie = Movie.find(params[:id])
-    movie.destroy
+    @movie.destroy
     respond_to do |format|
       format.html { redirect_to movies_url }
       format.json { head :no_content }
@@ -33,6 +50,10 @@ class MoviesController < ApplicationController
   end
 
   private
+
+    def set_movie
+      @movie = Movie.find(params[:id])
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params

@@ -11,14 +11,10 @@ describe MoviesController do
       get("/movies/new").should route_to("movies#new")
     end
 
-    it "routes to #show" do
-      get("/movies/1").should route_to("movies#show", :id => "1")
-    end
-
     it "routes to #edit" do
       get("/movies/1/edit").should route_to("movies#edit", :id => "1")
     end
-
+    
     it "routes to #create" do
       post("/movies").should route_to("movies#create")
     end

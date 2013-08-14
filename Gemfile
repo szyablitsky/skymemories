@@ -28,7 +28,7 @@ end
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
-  gem 'compass-rails'
+  #gem 'compass-rails', '>= 2.0.alpha.0'
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.0.0'
 end
@@ -42,6 +42,7 @@ gem 'vimeo'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'simple_form', '>= 3.0.0.rc'
+gem 'bourbon'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

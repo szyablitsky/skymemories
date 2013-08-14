@@ -1,11 +1,14 @@
-// Place all the styles related to the Movies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.locale {
+@import "bourbon";
+
+@mixin gray-box {
   background-color: #eee;
   border: solid 1px lightgray;
-  margin-bottom: 10px;
+}
+
+.locale {
+  @include gray-box;
   padding: 10px;
+  margin-bottom: 10px;
   &:last-child {
     margin-bottom: 0;
   }
@@ -14,5 +17,20 @@
 .movie {
   .movie-main {
     
+  }
+}
+
+.videos {
+  @include gray-box;
+  @include clearfix;
+  padding: 10px 0 0 10px;
+  .video {
+    background-color: white;
+    padding: 10px 10px 5px 10px;
+    margin: 0 10px 10px 0;
+    float: left;
+    figcaption {
+      margin: 0;
+    }
   }
 }
