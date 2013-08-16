@@ -5,48 +5,30 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:edit, :update, :destroy]
 
   def index
-    @locale_groups = Movie.group_by_locale
-  end
-
-  def new
-    @videos = VimeoHelper.videos
-  end
-
-  def edit
+    @locales = Movie.group_by_locale
   end
 
   def create
     @movie = Movie.new(movie_params)
 
-    respond_to do |format|
-      if @movie.save
-        format.html { redirect_to @movie, success: 'Movie was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @movie }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @movie.errors, status: :unprocessable_entity }
-      end
+    if @movie.save
+      redirect_to movies_path, success: 'Movie was successfully created.'
+    else
+      redirect_to movies_path, error: 'Problems.'
     end
   end
 
   def update
-    respond_to do |format|
-      if @movie.update(movie_params)
-        format.html { redirect_to movies_path, notice: 'Movie was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @movie.errors, status: :unprocessable_entity }
-      end
+    if @movie.update(movie_params)
+      redirect_to movies_path, success: 'Movie was successfully updated.'
+    else
+      redirect_to movies_path, error: 'Problems.'
     end
   end
 
   def destroy
     @movie.destroy
-    respond_to do |format|
-      format.html { redirect_to movies_url }
-      format.json { head :no_content }
-    end
+    redirect_to movies_url
   end
 
   private

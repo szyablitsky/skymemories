@@ -7,11 +7,30 @@ class Movie < ActiveRecord::Base
   validates :locale, presence: true
   validates :locale, inclusion: { in: LOCALES, message: 'не входит в список языков' }
 
-  scope :main, lambda { where('main=?',true) }
-  scope :other, lambda { where('main<>?',true) }
+  scope :main, lambda { where('main=?', true) }
+  scope :other, lambda { where('main<>?', true) }
 
   def Movie.group_by_locale
-    Movie.all.group_by(&:locale)
+    Movie.all.order('main desc').group_by(&:locale)
+  end
+
+  alias _update update
+
+  def update(params)
+    if !self.main and params[:main]
+      movie = Movie.where(locale: self.locale, main: true).first
+      return false unless movie.update_attribute(:main, false)
+    end
+    self._update(params)
+  end
+
+  alias _destroy destroy
+
+  def destroy
+    if self.main and Movie.where(locale: self.locale).count > 1
+      return false unless Movie.where(locale: self.locale).first.update_attribute(:main, false)
+    end
+    self._destroy
   end
 
 end

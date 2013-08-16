@@ -3,7 +3,7 @@ Skymemories::Application.routes.draw do
   root 'pages#home'
   get 'contact', to: 'pages#contact'
   
-  resources :movies, except: [:show]
+  resources :movies, except: [:show, :new, :edit]
   resources :posts
   
   resources :users

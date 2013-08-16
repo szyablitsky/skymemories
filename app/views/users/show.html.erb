@@ -2,5 +2,5 @@
 <h1>Пользователь</h1>
 <p>
   <%= gravatar_image_tag(@user.email, alt: @user.name, class: 'gravatar') %>
-  <%= "#{@user.name}, #{@user.email}" %>
+  <%= "#{escape_once(@user.name}), #{@user.email}" %>
 </p>

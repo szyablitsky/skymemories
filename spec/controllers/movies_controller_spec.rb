@@ -13,21 +13,6 @@ describe MoviesController do
     end
   end
 
-  describe "GET new" do
-    it "assigns vimeo videos array as @videos" do
-      #stub 
-      get :new, {}, valid_session
-      assigns(:videos)#.should be_kind_of_array
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested movie as @movie" do
-      get :edit, {:id => movie.to_param}, valid_session
-      assigns(:movie).should eq(movie)
-    end
-  end
-
   describe "POST create" do
     describe "with valid params" do
       it "creates a new Movie" do
@@ -42,9 +27,9 @@ describe MoviesController do
         assigns(:movie).should be_persisted
       end
 
-      it "redirects to the created movie" do
+      it "redirects to movies list" do
         post :create, {:movie => valid_attributes}, valid_session
-        response.should redirect_to(Movie.last)
+        response.should redirect_to(movies_path)
       end
     end
 
@@ -56,11 +41,11 @@ describe MoviesController do
         assigns(:movie).should be_a_new(Movie)
       end
 
-      it "re-renders the 'new' template" do
+      it "redirects to movies list" do
         # Trigger the behavior that occurs when invalid params are submitted
         Movie.any_instance.stub(:save).and_return(false)
         post :create, {:movie => { "vimeo_id" => "invalid value" }}, valid_session
-        response.should render_template("new")
+        response.should redirect_to(movies_path)
       end
     end
   end
@@ -95,11 +80,11 @@ describe MoviesController do
         assigns(:movie).should eq(movie)
       end
 
-      it "re-renders the 'edit' template" do
+      it "redirects to movies list" do
         # Trigger the behavior that occurs when invalid params are submitted
         Movie.any_instance.stub(:save).and_return(false)
         put :update, {:id => movie.to_param, :movie => { "vimeo_id" => "invalid value" }}, valid_session
-        response.should render_template("edit")
+        response.should redirect_to(movies_path)
       end
     end
   end

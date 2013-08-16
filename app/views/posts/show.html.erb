@@ -3,22 +3,22 @@
 
 <p>
   <strong>Заголовок:</strong>
-  <%= @post.title %>
+  <%= escape_once(@post.title) %>
 </p>
 
 <p>
   <strong>Текст:</strong>
-  <%= @post.content %>
+  <%= escape_once(@post.content) %>
 </p>
 
 <p>
   <strong>Публиковать:</strong>
-  <%= @post.published %>
+  <%= escape_once(@post.published) %>
 </p>
 
 <p>
   <strong>Пользователь:</strong>
-  <%= @post.user.name %>
+  <%= escape_once(@post.user.name) %>
 </p>
 
 <%= link_to 'Редактирование', edit_post_path(@post) %> |

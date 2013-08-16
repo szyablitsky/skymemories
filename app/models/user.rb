@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }
-  validates :email, format: /.+@.+\..+/
+  validates :email, format: /\A.+@.+\..+\z/
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64

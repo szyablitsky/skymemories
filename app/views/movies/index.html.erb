@@ -1,10 +1,16 @@
 <% provide :title, 'Фильмы' %>
 <h1>Фильмы</h1>
 
-<% @locale_groups.each do |locale, movies| %>
+<% sort_and_add_locales(@locales).each do |locale, movies| %>
   <section class="locale">
-    <%= render movies %>
+    <%= locale_header(locale) %>
+    <ul class="movies">
+      <%= render movies %>
+      <% if movies.count < 4 %>
+        <li>
+          <%= render "id_form", movie: Movie.new(locale: locale, main: (movies.count == 0)) %>
+        </li>
+      <% end %>
+    </ul>
   </section>
 <% end %>
-
-<%= link_to 'Добавить фильм', new_movie_path %>

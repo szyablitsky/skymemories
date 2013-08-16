@@ -1,5 +1,6 @@
-<div class="<%= movie_class(movie) %>">
-  <%= locale_for(movie) %>
-  <%= movie.vimeo_id %>
-  <%= link_to 'Удалить', movie, method: :delete, data: { confirm: 'Удалить фильм?' } %>
-</div>
+<li class="<%= movie_class_for movie %>">
+  <%= vimeo_info_for movie %>
+  <%= render "id_form", movie: movie %>
+  <%= main_form_for movie %>
+  <%= link_to 'Удалить', movie, method: :delete, data: { confirm: 'Удалить фильм?' }, class: "btn btn-default" %>
+</li>
