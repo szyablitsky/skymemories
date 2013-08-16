@@ -8,6 +8,10 @@ class MoviesController < ApplicationController
     @locales = Movie.group_by_locale
   end
 
+  def new
+    @videos = VimeoHelper.videos
+  end
+
   def create
     @movie = Movie.new(movie_params)
 

@@ -2,8 +2,16 @@ module MoviesHelper
 
   LOCALE_NAMES = { 'ru' => 'Русский', 'en' => 'English', 'he' => 'עִבְרִית' }
 
-  def locale_header(locale)
-    content_tag :header, LOCALE_NAMES[locale]
+  def locale_name(locale)
+    LOCALE_NAMES[locale]
+  end
+
+  def locale(params)
+    if LOCALE_NAMES.has_key? params['locale']
+      params['locale']
+    else
+      'ru'
+    end
   end
 
   # Movie model

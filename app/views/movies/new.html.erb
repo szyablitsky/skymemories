@@ -1,0 +1,9 @@
+<% provide :title, "Добавление фильма" %>
+<% locale = locale(params) %>
+<h1>Новый фильм (язык <%= locale_name(locale) %>)</h1>
+
+<ul class="videos">
+  <% @videos.each do |v| %>
+    <%= render "video", video: v, locale: locale %>
+  <% end %>
+</ul>

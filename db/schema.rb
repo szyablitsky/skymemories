@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130812043741) do
+ActiveRecord::Schema.define(version: 20130816051159) do
 
   create_table "movies", force: true do |t|
     t.integer  "vimeo_id"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20130812043741) do
     t.boolean  "main"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.string   "thumbnail"
   end
 
   add_index "movies", ["vimeo_id"], name: "index_movies_on_vimeo_id", unique: true

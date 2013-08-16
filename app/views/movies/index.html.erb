@@ -3,14 +3,20 @@
 
 <% sort_and_add_locales(@locales).each do |locale, movies| %>
   <section class="locale">
-    <%= locale_header(locale) %>
-    <ul class="movies">
-      <%= render movies %>
-      <% if movies.count < 4 %>
-        <li>
-          <%= render "id_form", movie: Movie.new(locale: locale, main: (movies.count == 0)) %>
-        </li>
-      <% end %>
-    </ul>
+    <header>
+      <%= locale_name(locale) %>
+      <%= link_to "Добавить", new_movie_path(locale: locale) %>
+    </header>
+    
+    <% if movies %>
+      <ul class="movies">
+        <%= render movies %>
+        <% if movies.count < 4 %>
+          <li>
+            <%= render "id_form", movie: Movie.new(locale: locale, main: (movies.count == 0)) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
   </section>
 <% end %>

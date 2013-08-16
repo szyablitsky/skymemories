@@ -28,7 +28,7 @@ class Movie < ActiveRecord::Base
 
   def destroy
     if self.main and Movie.where(locale: self.locale).count > 1
-      return false unless Movie.where(locale: self.locale).first.update_attribute(:main, false)
+      return false unless Movie.where(locale: self.locale).first.update_attribute(:main, true)
     end
     self._destroy
   end
