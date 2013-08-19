@@ -7,9 +7,9 @@ describe MoviesController do
   let(:valid_session) { {} }
 
   describe "GET index" do
-    it "assigns all movies as @movies" do
+    it "assigns all movies as grouped @locales array" do
       get :index, {}, valid_session
-      assigns(:locale_groups).should eq({}) # [en:[movie]]
+      assigns(:locales).should eq({}) # [en:[movie]]
     end
   end
 
