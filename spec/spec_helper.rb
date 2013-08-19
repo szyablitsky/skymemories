@@ -12,8 +12,9 @@ Spork.prefork do
   require 'rspec/rails'
   require 'rspec/autorun'
 
+  require 'coveralls'
   #SimpleCov
-  require 'simplecov'
+  # require 'simplecov'
 
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
@@ -56,6 +57,7 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  SimpleCov.start 'rails'
+  Coveralls.wear!
+  # SimpleCov.start 'rails'
   FactoryGirl.reload
 end

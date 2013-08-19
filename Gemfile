@@ -19,13 +19,13 @@ end
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
-  gem 'simplecov'
   gem 'shoulda-matchers'
   gem 'rb-inotify'
   gem 'libnotify'
   gem 'spork', '~> 1.0rc'
   gem 'guard-spork'
   gem 'childprocess', '0.3.6'
+  gem 'coveralls', require: false
 end
 
 group :assets do
