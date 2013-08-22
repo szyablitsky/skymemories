@@ -14,17 +14,17 @@ class MoviesController < ApplicationController
     @movie = Movie.new(movie_params)
 
     if @movie.save
-      redirect_to movies_path, success: 'Movie was successfully created.'
+      redirect_to movies_path, flash: {success: 'Movie was successfully created.'}
     else
-      redirect_to movies_path, error: 'Problems.'
+      redirect_to movies_path, flash: {danger: 'Problems.'}
     end
   end
 
   def update
     if @movie.update(movie_params)
-      redirect_to movies_path, success: 'Movie was successfully updated.'
+      redirect_to movies_path, flash: {success: 'Movie was successfully updated.'}
     else
-      redirect_to movies_path, error: 'Problems.'
+      redirect_to movies_path, flash: {danger: 'Problems.'}
     end
   end
 
@@ -41,6 +41,6 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:vimeo_id, :locale, :main)
+      params.require(:movie).permit(:vimeo_id, :locale, :main, :title, :thumbnail)
     end
 end

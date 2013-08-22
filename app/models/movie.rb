@@ -1,14 +1,13 @@
 class Movie < ActiveRecord::Base
 
+  before_create :set_main
+
   validates :vimeo_id, presence: true
   validates :vimeo_id, numericality: true
   validates :vimeo_id, uniqueness: true
 
   validates :locale, presence: true
   validates :locale, inclusion: { in: LOCALES, message: 'не входит в список языков' }
-
-  scope :main, lambda { where('main=?', true) }
-  scope :other, lambda { where('main<>?', true) }
 
   def Movie.group_by_locale
     Movie.all.order('main desc').group_by(&:locale)
@@ -32,5 +31,12 @@ class Movie < ActiveRecord::Base
     end
     self._destroy
   end
+
+  private
+
+    def set_main
+      self.main = (Movie.where(locale: self.locale).count == 0)
+      return true
+    end
 
 end

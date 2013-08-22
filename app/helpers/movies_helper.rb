@@ -1,7 +1,5 @@
 module MoviesHelper
 
-  # Movie model
-
   def sort_and_add_locales(locales)
     LOCALE_NAMES.map { |m| l = m[0]; [l, locales[l]] }
   end
@@ -21,16 +19,9 @@ module MoviesHelper
     end
   end
 
-  # Vimeo videos
-
-  def vimeo_info_for(movie)
-    video = Vimeo::Simple::Video.info("#{movie.vimeo_id}").parsed_response[0]
-    video_thumbnail_url = video[movie.main ? 'thumbnail_medium' : 'thumbnail_small']
-    raw "#{image_tag video_thumbnail_url} <p>#{video['title']}</p>"
-  end
-
-  def title_for(video)
-    truncate video['title'], length: 40
+  def thumbnail_for(movie)
+    url = movie.main ? movie.thumbnail.gsub('_100.','_200.') : movie.thumbnail
+    image_tag url
   end
 
 end
