@@ -12,6 +12,7 @@
 //
 //= require modernizr-2.6.2.min
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap/transition

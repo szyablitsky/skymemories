@@ -28,9 +28,10 @@ videosLoaded = (v1, v2, v3) ->
   appendVideos v3[0]
 
 videosLoadError = ->
-  $('#videos li').html 'Ошибка получения списка фильмов с Vimeo'
+  $('#videos li').html 'Ошибка получения списка фильмов с Vimeo.
+    <div style="margin-bottom:5px;"><button>Попробовать еще раз</button></div>'
 
-$ ->
+loadVideos = ->
   url = 'http://vimeo.com/api/v2/skymemories/videos.json?page='
   params =
     dataType: 'jsonp'
@@ -43,6 +44,10 @@ $ ->
   params.url = url + '3'
   req3 = $.ajax params
   $.when(req1, req2, req3).then(videosLoaded, videosLoadError)
+
+$ ->
+  $('#videos').on 'click', 'button', (e) -> loadVideos()  
+  loadVideos()
 
 # video selecting
 
