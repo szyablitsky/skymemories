@@ -17,4 +17,9 @@ module ApplicationHelper
     gravatar_image_tag(user.email, options)
   end
 
+  #locale
+  def locale_name(locale)
+    LOCALE_NAMES[locale]
+  end
+
 end

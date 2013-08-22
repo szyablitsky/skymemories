@@ -1,5 +1,3 @@
-require 'vimeo_helper'
-
 class MoviesController < ApplicationController
 
   before_action :set_movie, only: [:edit, :update, :destroy]
@@ -10,7 +8,6 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new(locale: 'ru')
-    @videos = VimeoHelper.videos
   end
 
   def create

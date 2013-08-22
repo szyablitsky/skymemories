@@ -13,11 +13,12 @@ ru:
     # Labels and hints
     labels:
       defaults:
-        password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
         email: 'Адрес электронной почты'
         locale: 'Язык'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
         title: 'Наименование'
+        thumbnail: 'Миниатюра'
       user:
         name: 'Имя пользователя'
       movie:
