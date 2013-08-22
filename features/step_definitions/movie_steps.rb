@@ -7,6 +7,6 @@ When(/^I visit movies page$/) do
 end
 
 Then(/^I should see all movies$/) do
-  page.should have_content('222111001')
-  page.should have_content('222111002')
+  page.should have_content('Title1')
+  page.should have_content('Title2')
 end

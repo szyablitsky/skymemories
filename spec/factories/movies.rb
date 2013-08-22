@@ -3,6 +3,7 @@ FactoryGirl.define do
     sequence (:vimeo_id) { |i| 222111000 + i }
     locale 'ru'
     main true#, false
+    sequence (:title) { |i| 'Title' + i }
 	
     factory :movie_en do
       locale 'en'
