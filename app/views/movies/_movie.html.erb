@@ -1,6 +1,6 @@
 <li class="<%= movie_class_for movie %>">
   <%= vimeo_info_for movie %>
-  <%= render "id_form", movie: movie %>
+  <%= link_to 'Изменить', edit_movie_path(movie) %>
   <%= main_form_for movie %>
   <%= link_to 'Удалить', movie, method: :delete, data: { confirm: 'Удалить фильм?' }, class: "btn btn-default" %>
 </li>

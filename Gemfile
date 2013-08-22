@@ -9,6 +9,9 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'faker'
   gem 'brakeman'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :production do
@@ -45,6 +48,10 @@ gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'bourbon'
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+# gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+#                               :github => 'anjlab/bootstrap-rails',
+#                               :branch => '3.0.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

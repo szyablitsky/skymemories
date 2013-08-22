@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +7,21 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <% if signed_in? %>
+    <style type="text/css">body{padding-top:60px;}</style>
+  <% end %>
 </head>
 <body>
 
+<%= render 'layouts/navbar' if signed_in? %>
 <%= render 'layouts/header' %>
 
-<div class="container">
-<%= render 'layouts/flash' %>
-<%= yield %>
-</div>
+<main role="main">
+  <div class="container">
+    <%= render 'layouts/flash' %>
+    <%= yield %>
+  </div>
+</main>
 
 <%= render 'layouts/footer' %>
 

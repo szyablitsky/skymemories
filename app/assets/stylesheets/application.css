@@ -1,12 +1,12 @@
 /*
  *= require_self
  *= require normalize
+ *= require bootstrap
 
  *= require typography
  *= require layout
  *= require header
  *= require forms
- *= require flash
  *= require footer
  *= require pagination
 

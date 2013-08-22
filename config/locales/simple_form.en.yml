@@ -1,0 +1,25 @@
+en:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'reauired'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "There is a problems with this form"
+    # Labels and hints
+    # labels:
+    #   defaults:
+    #     password: 'Пароль'
+    #   user:
+    #     new:
+    #       email: 'Адрес электронной почты'
+    #     edit:
+    #       email: 'Адрес электронной почты'
+    # hints:
+    #   defaults:
+    #     password: 'Минимум 6 символов'
+

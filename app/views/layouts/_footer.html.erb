@@ -1,6 +1,10 @@
-<footer id = "page-footer">
+<footer id = "page-footer" role="contentinfo">
   <div class="container">
     <p>Vimeo: <%= link_to 'skymemories', 'http://vimeo.com/skymemories' %></p>
     <p>&copy; 2013 Sky Memories</p>
+    <p>
+      <%= link_to "[Вход]", login_path %> |
+      <%= link_to "[Регистрация]", register_path %>
+    </p>
   </div>
 </footer>

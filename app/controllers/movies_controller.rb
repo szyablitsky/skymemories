@@ -9,6 +9,7 @@ class MoviesController < ApplicationController
   end
 
   def new
+    @movie = Movie.new(locale: 'ru')
     @videos = VimeoHelper.videos
   end
 

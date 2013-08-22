@@ -11,11 +11,6 @@
     <% if movies %>
       <ul class="movies">
         <%= render movies %>
-        <% if movies.count < 4 %>
-          <li>
-            <%= render "id_form", movie: Movie.new(locale: locale, main: (movies.count == 0)) %>
-          </li>
-        <% end %>
       </ul>
     <% end %>
   </section>

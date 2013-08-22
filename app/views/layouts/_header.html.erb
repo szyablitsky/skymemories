@@ -1,18 +1,5 @@
 <header id="page-header" role="banner">
   <div class="container">
-    <nav id="utility">
-      <p>
-        <% if signed_in? %>
-          Вы вошли как <strong><%= current_user.name %></strong><br />
-          <%= link_to "[Ваш профиль]", current_user %> |
-          <%= link_to "[Настройка]", edit_user_path(current_user) %> |
-          <%= link_to "[Выйти]", logout_path, method: "delete" %>
-        <% else %>
-          <%= link_to "[Вход]", login_path %> |
-          <%= link_to "[Регистрация]", register_path %>
-        <% end %>
-      </p>
-    </nav>
     <%= link_to root_path, id: "logo" do %>
       <%#= image_tag("logo.png", alt: "SkyMemories home") %>
       <div class="brand-name">SKY MEMORIES</div>

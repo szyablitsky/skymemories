@@ -11,3 +11,5 @@
 * [simple form](https://github.com/plataformatec/simple_form)
 * [The Responsive jQuery Content Slider](http://bxslider.com/)
 * [inactive users](https://github.com/pluginaweek/state_machine)
+* [decorator for models](https://github.com/drapergem/draper)
+* [widget encapsulation](https://github.com/apotonick/cells/)
