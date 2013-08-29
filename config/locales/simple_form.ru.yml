@@ -22,6 +22,7 @@ ru:
       user:
         name: 'Имя пользователя'
       movie:
+        vimeo_id: 'Vimeo ID'
     hints:
       defaults:
         password: 'Минимум 8 символов'
