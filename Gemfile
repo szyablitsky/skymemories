@@ -42,6 +42,7 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0'
 end
 
+gem 'puma'
 gem 'russian'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
@@ -62,9 +63,6 @@ end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
