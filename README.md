@@ -12,8 +12,8 @@ Tested with RSpec, Cucumber.
 
 Best practices applied in this project:
 * Minimal Helpers usage and Model Decorators for cleaner global namespace
-* Using POROs as Service Objects for cleaner Models code (Single Responsibility Principle)
+* Using Plain Old Ruby Objects (PORO) as Service Objects for cleaner Models code ([SRP])
 
-*[PORO]: Plain Old Ruby Object
+[SRP]: http://en.wikipedia.org/wiki/Single_responsibility_principle
 
 by [Sergey Zyablitsky](http://finch.pro/)
