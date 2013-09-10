@@ -7,4 +7,13 @@
 
 SkyMemories movie stubio website.
 
+Built with Rails 4, Ruby 2, Bootstrap 3.
+Tested with RSpec, Cucumber.
+
+Best practices applied in this project:
+* Minimal Helpers usage and Model Decorators for cleaner global namespace
+* Using POROs as Service Objects for cleaner Models code (Single Responsibility Principle)
+
+*[PORO]: Plain Old Ruby Object
+
 by [Sergey Zyablitsky](http://finch.pro/)
