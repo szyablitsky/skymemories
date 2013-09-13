@@ -1,34 +1,4 @@
 <% provide :title, "Добавление фильма" %>
 <h1>Новый фильм</h1>
 
-<div class="row">
-  <div class="col-md-4">
-    <%= simple_form_for @movie do |f| %>
-      <%= f.error_notification %>
-      <%= f.error :vimeo_id, id: "load-error" %>
-
-      <%= f.input :vimeo_id, input_html: {style: "width:100px"} %>
-
-      <%= content_tag :button, "Заполнить",
-                      id: "lookup", class: "btn btn-default",
-                      "data-loading-text" => "Обработка..." %>
-
-      <%= f.input :title %>
-      <%= f.input :locale, collection: LOCALE_NAMES.map { |x| [x[1],x[0]]} %>
-      <%= f.input :thumbnail do %>
-        <%= image_tag @movie.thumbnail, id: "img_for_movie_thumbnail" %>
-        <%= f.input_field :thumbnail, as: :hidden %>
-      <% end %>
-      <%= f.button :submit, class: "btn-primary" %>
-      <%= image_tag "preload.gif", class: "hidden" %>
-    <% end %>
-  </div>
-  <div class="col-md-8">
-    <%= content_tag :input, "", id: "video-search", class: "form-control" %>
-    <ul id="videos">
-      <li><%= image_tag "preload.gif" %></li>
-    </ul>
-  </div>
-</div>
-
-
+<%= render "form", movie: @movie %>
