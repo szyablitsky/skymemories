@@ -24,7 +24,7 @@ class PostsController < ApplicationController
         format.json { render action: 'show', status: :created, location: @post }
       else
         format.html { render action: 'new' }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json { json_render_errors }
       end
     end
   end
@@ -36,7 +36,7 @@ class PostsController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json { json_render_errors }
       end
     end
   end
@@ -59,4 +59,9 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content, :published, :user_id)
     end
+
+    def json_render_errors
+      render json: @post.errors, status: :unprocessable_entity
+    end
+
 end

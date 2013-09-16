@@ -7,7 +7,7 @@ class MoviesController < ApplicationController
   end
 
   def new
-    @movie = Movie.new(locale: 'ru')
+    @movie = Movie.new(locale: LocalesService.get_locale_from(params))
   end
 
   def create
