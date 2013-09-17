@@ -53,7 +53,6 @@ gem 'vimeo'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'simple_form', '>= 3.0.0.rc'
-gem 'bourbon'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 
 group :doc do

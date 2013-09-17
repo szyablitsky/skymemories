@@ -6,12 +6,17 @@ module Movies
     end
 
     def destroy
-      @movie.destroy
-      if @movie.main
-        movies = Movie.where(locale: @movie.locale)
-        movies.first.update_attribute(:main, true) if movies.count > 0
-      end
+      @movie.destroy && set_main_movie
     end
+
+    private
+
+      def set_main_movie
+        if @movie.main
+          movies = Movie.where(locale: @movie.locale)
+          movies.first.update_attribute(:main, true) if movies.count > 0
+        end
+      end
 
   end
 end
