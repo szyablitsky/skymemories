@@ -7,25 +7,24 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <% if signed_in? %>
-    <style type="text/css">body{padding-top:60px;}</style>
-  <% end %>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/touch-icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/touch-icon-ipad.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/touch-icon-iphone-retina.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/touch-icon-ipad-retina.png" />
 </head>
 <body>
 
-<%= render 'layouts/navbar' if signed_in? %>
-<%= render 'layouts/header' %>
-
-<main role="main">
-  <div class="container">
-    <%= render 'layouts/flash' %>
-    <%= yield %>
-  </div>
-</main>
+<% if current_page?(root_url) %>
+  <%= yield %>
+<% else %>      
+  <%= render "layouts/navbar" %>  
+  <%= render "layouts/main" %>
+<% end %>      
 
 <%= render 'layouts/footer' %>
 
-<%= if Rails.env.development? 
+<%= if false && Rails.env.development? 
       content_tag :div, class: "container" do
         debug(params)
       end

@@ -3,7 +3,9 @@
     <p>Vimeo: <%= link_to 'skymemories', 'http://vimeo.com/skymemories' %></p>
     <p>&copy; 2013 Sky Memories</p>
     <p>
-      <%= link_to "[Вход]", login_path %> |
+      <% if !signed_in? %>
+        <%= link_to "[Вход]", login_path  %> |
+      <% end %>
       <%= link_to "[Регистрация]", register_path %>
     </p>
   </div>

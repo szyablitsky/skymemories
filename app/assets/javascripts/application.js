@@ -13,6 +13,7 @@
 //= require modernizr-2.6.2.min
 //= require jquery
 //= require jquery.turbolinks
+//= require jquery.fitvids
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap/transition
@@ -21,4 +22,5 @@
 //= require bootstrap/button
 //= require bootstrap/tooltip
 //= require bootstrap/popover
+//= require bootstrap/dropdown
 //= require_tree .

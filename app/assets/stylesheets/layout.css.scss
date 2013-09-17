@@ -1,7 +1,31 @@
 @import 'constants';
 
 body {
-  background: image-url('paper.png') repeat #f1f1f1;
+  background: image-url('paper.png') repeat $body-background;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#page-footer {
+  padding: $section-padding 0;
+  background-color: rgba(48, 48, 48, 0.63);
+  border-top: 1px gray solid;
+  color: $footer-color;
+  a {
+    color: $footer-link-color;
+    &:hover {
+      color: $footer-hover-link-color;
+    }
+  }
+}
+
+main {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
 }
 
 // debug =======================================

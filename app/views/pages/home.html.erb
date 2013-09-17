@@ -1,2 +1,59 @@
-<h1>Pages#home</h1>
-<p>Домашняя страница. Тут необходимо разместить фильмы и ссылки на статьи блога.</p>
+<div id="home-header">
+  <%= render "layouts/navbar" %>
+  <div id="home-banner" class="container" role="banner">
+    <div class="row">
+      <div class="col-md-4">
+        <div id="call-to-action">
+          <h1>Детям будущего посвещаяется</h1>
+          <p>Семейные фильмы и что-то еще</p>
+          <%= link_to "Напишите нам", contact_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <iframe src="http://player.vimeo.com/video/16391352?title=0&amp;byline=0&amp;portrait=0&amp;color=87c9ed" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<div id="studio-services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h2>How we work</h2>
+        <p>The start is important. Together we decide what to build and when. During the development process you can be sure that what’s built is the right thing for you through constant insight and feedback. After launch, when you require more, we will be happy to help you. We believe in longterm relationships.</p>
+      </div>
+      <div class="col-md-2">
+        <h2>&nbsp;</h2>
+        <%= image_tag "http://placehold.it/150/688DAF/ffffff&text=our+work+(vimeo)", class: "center" %>
+      </div>
+      <div class="col-md-5">
+        <h2>What you will get</h2>
+        <p>A working application from week one. Constantly developed on time according to your budget. You will get solid code that is easy to maintain and develop further. Built with reliable techniques that produce high quality software. We build your application the same way a tailor makes an exclusive suit: by hand with great care for every detail.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="courses">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Курсы по видеосъемке для начинающих</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <p>Для мам, пап и детей старше 6 лет.</p>
+        <p>Для тех, кто хочет сохранить семейную память и получить удовольствие от процесса видеосъемки.</p>
+        <p>Вы получите базовую информацию о том, чем снимать и главное как. Такие понятия как свет, цвет и композиция станут для вас родными и понятными. Вы научитесь видеть красоту семейных событий и создавать свои киношедевры. Наши занятия помогут вам сделать значительный шаг вперед в освоении любого мобильного устройства (фотоаппарата, видеокамеры, мобильного телефона), чтобы снять на видео самые трогательные и значимые моменты из жизни вашей семьи.</p>
+        <p>Занятия будут проводиться два раза в неделю в течении 2-х месяцев. Оплата 5000 тыс рублей в месяц.</p>
+        <p>Место проведения: студия Fotolook (ул.Шеронова 8 корпус 3 оф. 13)</p>
+        <p><%= link_to "Записаться", contact_path, class: "btn btn-default" %></p>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag "http://placehold.it/350/688DAF/ffffff&text=child,+parents+with+camera" %>
+      </div>
+    </div>
+  </div>
+</div>

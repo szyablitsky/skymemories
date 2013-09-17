@@ -1,17 +1,25 @@
 // --------------------------------------------------------------------------
 // Typography
 // --------------------------------------------------------------------------
-$main-color:       #5f5f5f;
-$main-font-family: 'PT Serif', serif;
-$main-font-size:   16px;
-$main-line-height: $main-font-size * 1.5;
 
-$header-font-family: 'Ubuntu', sans-serif;
+$body-background:         #f1f1f1;
 
-$hilight-dense-color: #77f;
-$hilight-loose-color: lighten($hilight-dense-color,10%);
+$main-color:              #5f5f5f;
+$main-font-family:        'PT Serif', serif;
+$main-font-size:          16px;
+$main-line-height:        $main-font-size * 1.5;
+
+$header-font-family:      'Ubuntu', sans-serif;
+
+$hilight-dense-color:     #77f;
+$hilight-loose-color:     lighten($hilight-dense-color,10%);
+
+$footer-color:            #E0E0E0;
+$footer-link-color:       #96C6F0;
+$footer-hover-link-color: #1D405E;
 
 // --------------------------------------------------------------------------
-// Grid
+// Layout
 // --------------------------------------------------------------------------
-$normal-width: 960px;
+
+$section-padding:          $main-line-height;

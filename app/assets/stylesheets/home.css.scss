@@ -1,0 +1,23 @@
+@import "constants";
+
+#home-header {
+  background: image-url('wedding.jpg');
+  padding-bottom: $section-padding;
+}
+
+#home-banner {
+  padding-top: $section-padding;
+}
+
+#call-to-action {
+  background-color: rgba(255,255,255,.5);
+  padding: $section-padding;
+}
+
+#studio-services {
+  padding: $section-padding 0;
+}
+
+#courses {
+  padding: $section-padding 0;
+}

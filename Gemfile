@@ -32,7 +32,7 @@ group :test do
   gem 'libnotify'
   gem 'spork', '~> 1.0rc'
   gem 'guard-spork'
-  gem 'childprocess', '0.3.6'
+  gem 'childprocess'
   gem 'coveralls', require: false
 end
 

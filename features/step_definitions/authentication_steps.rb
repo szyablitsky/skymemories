@@ -27,3 +27,20 @@ end
 Then(/^he should see a signout link$/) do
   expect(page).to have_link('Выйти', href: logout_path)
 end
+
+Given(/^the user is signed in$/) do
+  step "a user visits the signin page"
+  step "the user submits valid signin information"
+end
+
+When(/^the user signs out$/) do
+  click_link "Выйти"
+end
+
+Then(/^he should see a signin link$/) do
+  expect(page).to have_link('Вход', href: login_path)
+end
+
+Then(/^he should see home page$/) do
+  page.should_not have_title(" | ")
+end
