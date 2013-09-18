@@ -14,7 +14,7 @@ appendVideos = (v) ->
       attr('data-thumbnail', video.thumbnail_small).
       popover
         html: true
-        placement: 'auto top'
+        placement: 'bottom'
         trigger: 'hover'
         content: "<img src=\"#{video.thumbnail_small}\">"
         delay: 200

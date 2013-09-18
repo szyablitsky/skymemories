@@ -2,7 +2,7 @@
 <h1>Фильмы</h1>
 
 <% sort_and_add_locales(@locales).each do |locale, movies| %>
-  <section class="locale">
+  <section class="locale clearfix">
     <header>
       <%= locale_name(locale) %>
       <%= link_to "Добавить", new_movie_path(locale: locale) %>
