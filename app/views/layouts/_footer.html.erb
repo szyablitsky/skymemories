@@ -6,9 +6,9 @@
         <p>&copy; 2013 <strong>Sky Memories</strong></p>
       </div>
       <div class="col-md-6">
-        <p class="text-right">Vimeo: <%= link_to 'skymemories', 'http://vimeo.com/skymemories' %></p>
+        <p class="text-right"><%= link_to "Vimeo", "http://vimeo.com/skymemories" %></p>
         <% if !signed_in? %>
-          <p>
+          <p class="text-right">
             <%= link_to "[Вход]", login_path  %> |
             <%= link_to "[Регистрация]", register_path %>
           </p>

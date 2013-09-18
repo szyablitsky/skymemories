@@ -6,7 +6,7 @@ module Movies
     end
 
     def update params
-      unset_main_movie && @movie.update(params)
+      unset_main_movie(params) && @movie.update(params)
     end
 
     private
@@ -14,8 +14,11 @@ module Movies
       def unset_main_movie params
         if !@movie.main and params[:main]
           movie = Movie.where(locale: @movie.locale, main: true).first
-          return false unless movie.update_attribute(:main, false)
+          if movie && !movie.update_attribute(:main, false)
+            return false
+          end
         end
+        return true
       end
   end
 end
