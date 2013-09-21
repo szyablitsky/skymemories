@@ -1,20 +1,19 @@
-<div id="home-header">
-  <%= render "layouts/navbar" %>
-  <div id="home-banner" class="container" role="banner">
-    <div class="row">
-      <div class="col-md-4">
-        <div id="call-to-action">
-          <h1>Детям будущего посвещаяется</h1>
-          <p>Семейные фильмы и что-то еще</p>
-          <%= link_to "Напишите нам", contact_path, class: "btn btn-primary" %>
-        </div>
-      </div>
-      <div class="col-md-8">
-        <iframe src="http://player.vimeo.com/video/16391352?title=0&amp;byline=0&amp;portrait=0&amp;color=87c9ed" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<% content_for :banner do %>
+  <div class="row">
+    <div class="col-md-4">
+      <div id="call-to-action">
+        <h1>Детям будущего посвещаяется</h1>
+        <p>Семейные фильмы и что-то еще</p>
+        <p><strong>The secret is trust.</strong> The most important thing when hiring developers and designers is that you have confidende in the people building your application.</p>
+        <p><strong>Welcome to Sky Memeories.</strong> We help you work and communicate more efficiently by creating reliable software that supports your business.</p>
+        <%= link_to "Напишите нам", contact_path, class: "btn btn-primary" %>
       </div>
     </div>
-  </div> 
-</div>
+    <div class="col-md-8">
+      <iframe src="http://player.vimeo.com/video/16391352?title=0&amp;byline=0&amp;portrait=0&amp;color=87c9ed" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </div>
+  </div>
+<% end %>
 
 <div id="home-services">
   <div class="container">
@@ -73,7 +72,7 @@
     <div class="row">
       <div class="col-md-3">
         <p>Use the form to drop us a line. You can also send us a regular email or give us a call.</p> 
-        <p>Phone: +7 (924) 307-77-11<br />Email: <%= mail_to "maxmaevsky@gmail.com" %></p>
+        <p>Phone: +7 (924) 307-77-11<br />Email: <%= mail_to "info@skymemories.ru" %></p>
       </div>
       <dvi class="col-md-6">
         Contact form

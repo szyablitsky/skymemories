@@ -15,10 +15,17 @@
 </head>
 <body>
 
+<div id="home-header">
+  <%= render "layouts/navbar" %>
+  <div id="home-banner" class="container" role="banner">
+    <%= yield :banner %>
+  </div> 
+</div>
+
 <% if current_page?(root_url) %>
   <%= yield %>
 <% else %>      
-  <%= render "layouts/navbar" %>  
+  <%= yield :map %>
   <%= render "layouts/main" %>
 <% end %>      
 

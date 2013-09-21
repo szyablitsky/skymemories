@@ -1,7 +1,47 @@
 <% provide :title, "Контакты" %>
-<h1>Контакты</h1>
-<p>адрес: г. Хабаровск, улица Шевчука, 28ка, офис 421 <br />
-   посмортреть на карте</p>
-<p>телефон: +7 (924) 307-77-11</p>
-<p>email: <%= mail_to 'maxmaevsky@gmail.com' %></p>
 
+<% content_for :banner do %>
+  <p class="lead"><i>Как связаться</i></p>
+<% end %>
+
+<% content_for :map do %>
+  <div id="map"></div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>Контакты</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <p>Хотите работать нами? Воспользуйтесь формой ниже, чтобы отправить сообщение. Мы будем рабды обсудить с вами вопросы относительно фильма вашей мечты.</p>
+    <p>тут будет форма</p>
+  </div>
+  <div class="col-md-4">
+  	<address>
+  	  <strong>Sky Memories</strong><br />
+      г. Хабаровск,<br />
+      ул. Шевчука, 28ка,<br />
+      офис 421
+  	</address>
+    <p>телефон: +7 (924) 307-77-11</p>
+    <p>email: <%= mail_to 'info@skymemories.ru' %></p>
+  </div>
+</div>
+
+<!-- javascript -->
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
+<script>
+  ymaps.ready(init);
+  var myMap;
+
+ function init(){     
+    myMap = new ymaps.Map ("map", {
+      center: [48.454488, 135.096028],
+      zoom: 16,
+    });
+    myPlacemark = new ymaps.Placemark([48.454488, 135.096028], { content: 'SkyMemories', balloonContent: '<p>SkyMemories</p><p>Ваш семейный видеограф</p>' });
+    myMap.geoObjects.add(myPlacemark);
+  }
+</script>
