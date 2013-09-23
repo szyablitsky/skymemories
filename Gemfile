@@ -55,6 +55,8 @@ gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+gem 'newrelic_rpm'
+gem 'rvm-capistrano'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

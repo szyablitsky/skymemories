@@ -1,3 +1,5 @@
+require "rvm/capistrano"
+
 set :application, "Sky Memories"
 set :repository,  "git@github.com:szyablitsky/skymemories.git"
 
@@ -14,3 +16,15 @@ role :db,  "finch.pro", :primary => true # This is where Rails migrations will r
 set :user, "finch"
 set :deploy_to, "/home/finch/sites/sm.finch.pro"
 set :use_sudo, false
+
+set :rvm_ruby_string, :local
+set :rvm_autolibs_flag, "read-only" # more info: rvm help autolibs
+set :bundle_dir, ''
+set :bundle_flags, '--system --quiet'
+set :bundle_without,  [:development]
+
+before 'deploy',         'rvm:install_rvm'
+before 'deploy',         'rvm:install_ruby'
+before 'deploy',         'rvm:create_alias'
+before 'deploy',         'rvm:create_wrappers'
+after  'deploy',         'deploy:cleanup'
