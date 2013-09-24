@@ -10,6 +10,8 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'capistrano-rails', '~> 0.0.7'
+  gem 'rvm-capistrano'
+  gem 'capistrano-puma', require: false
 end
 
 group :development, :test do
@@ -26,7 +28,7 @@ group :production do
 end
 
 group :test do
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'rb-inotify'
@@ -56,7 +58,6 @@ gem 'will_paginate'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'newrelic_rpm'
-gem 'rvm-capistrano'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
