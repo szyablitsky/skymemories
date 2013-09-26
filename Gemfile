@@ -9,9 +9,9 @@ group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'capistrano-rails', '~> 0.0.7'
-  gem 'rvm-capistrano'
+  gem 'capistrano-rbenv'
   gem 'capistrano-puma', require: false
+  gem 'capistrano-rails', '~> 0.0.7'
 end
 
 group :development, :test do
