@@ -15,17 +15,10 @@ group :development do
 end
 
 group :development, :test do
-  # gem 'sqlite3'
-  gem 'pg'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'guard-rspec'#, '>= 3.0.0'
   gem 'faker'
-end
-
-group :production do
-  gem 'sqlite3'
-  # gem 'pg', '0.12.2'
 end
 
 group :test do
@@ -46,6 +39,7 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0'
 end
 
+gem 'pg'
 gem 'puma'
 gem 'russian'
 gem 'bcrypt-ruby', '~> 3.0.0'
