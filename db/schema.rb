@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20130816051159) do
     t.string   "thumbnail"
   end
 
-  add_index "movies", ["vimeo_id"], name: "index_movies_on_vimeo_id", unique: true
+  add_index "movies", ["vimeo_id"], name: "index_movies_on_vimeo_id", unique: true, using: :btree
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20130816051159) do
     t.datetime "updated_at"
   end
 
-  add_index "posts", ["created_at"], name: "index_posts_on_created_at"
-  add_index "posts", ["title"], name: "index_posts_on_title", unique: true
+  add_index "posts", ["created_at"], name: "index_posts_on_created_at", using: :btree
+  add_index "posts", ["title"], name: "index_posts_on_title", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20130816051159) do
     t.boolean  "admin",           default: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
 end
