@@ -12,8 +12,7 @@ test: &test
   adapter: postgresql
   host: localhost
   database: sm_test
-  username: sm_test
-  password: qwerty
+  username: postgres
   encoding: unicode
   reconnect: false
   pool: 5
