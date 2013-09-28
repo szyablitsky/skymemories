@@ -1,31 +1,25 @@
-development:
+connection: &connection
   adapter: postgresql
-  host: localhost
-  database: sm_dev
-  username: sm_dev
-  password: qwerty
   encoding: unicode
+  host: localhost
   reconnect: false
   pool: 5
+
+development:
+  <<: *connection
+  database: sm_dev
+  username: postgres
 
 test: &test
-  adapter: postgresql
-  host: localhost
+  <<: *connection
   database: sm_test
   username: postgres
-  encoding: unicode
-  reconnect: false
-  pool: 5
 
 production:
-  adapter: postgresql
-  host: localhost
+  <<: *connection
   database: sm_prod
   username: sm_prod
   password: <%= ENV['SM_DB_PASSWORD'] %>
-  encoding: unicode
-  reconnect: false
-  pool: 5
 
 cucumber:
   <<: *test
