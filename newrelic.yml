@@ -16,7 +16,7 @@ common: &default_settings
   # account.  This key binds your Agent's data to your account in the
   # New Relic service.
   #license_key: '632742558f89eb0bcadd7ec488e45d85b0b64573'
-  license_key: <%= ENV['SM_NR_LK'] %>
+  license_key: <%= ENV['SM_NR_LICENSE_KEY'] %>
 
   # Agent Enabled (Ruby/Rails Only)
   # Use this setting to force the agent to run or not run.
@@ -193,7 +193,7 @@ development:
   # 'enabled').
   # NOTE: for initial evaluation purposes, you may want to temporarily
   # turn the agent on in development mode.
-  monitor_mode: false
+  monitor_mode: true
 
   # Rails Only - when running in Developer Mode, the New Relic Agent will
   # present performance information on the last 100 transactions you have
