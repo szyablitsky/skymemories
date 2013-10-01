@@ -1,6 +1,7 @@
 /*
  *= require_self
  *= require bootstrap
+ *= require pace/pace-theme-minimal
 
  *= require typography
  *= require layout

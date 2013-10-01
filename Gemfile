@@ -12,6 +12,7 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-puma', require: false
   gem 'capistrano-rails', '~> 0.0.7'
+  gem 'erd'
 end
 
 group :development, :test do
@@ -50,9 +51,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'vimeo'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
-gem 'simple_form', '>= 3.0.0.rc'
+gem 'simple_form'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'newrelic_rpm'
+gem 'pace-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

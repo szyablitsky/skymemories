@@ -23,4 +23,5 @@
 //= require bootstrap/tooltip
 //= require bootstrap/popover
 //= require bootstrap/dropdown
+//= require pace/pace
 //= require_tree .
