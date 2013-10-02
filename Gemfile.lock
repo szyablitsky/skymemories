@@ -1,6 +1,12 @@
 GIT
+  remote: git://github.com/szyablitsky/bxslider-rails.git
+  revision: b3c2e2724f3d2b2ced9550fe4f538f45d22d9ee1
+  specs:
+    bxslider-rails (4.1.0)
+
+GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: cc5495eaa665a0e919768231c93c6e83c909d837
+  revision: 0e88056ac5d58fb0bbd23d3fe929eac01712d964
   branch: 3
   specs:
     bootstrap-sass (3.0.0.0)
@@ -53,7 +59,6 @@ GEM
       slim (>= 1.3.6, < 3.0)
       terminal-table (~> 1.4)
     builder (3.1.4)
-    bxslider-rails (4.1.0)
     capistrano (2.15.5)
       highline
       net-scp (>= 1.0.0)
@@ -109,7 +114,7 @@ GEM
       nokogiri
       rails-erd (>= 0.4.5)
     erubis (2.7.0)
-    execjs (2.0.1)
+    execjs (2.0.2)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.2.1)
@@ -165,7 +170,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.0)
     multi_test (0.0.2)
-    multi_xml (0.5.4)
+    multi_xml (0.5.5)
     multipart-post (1.2.0)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
@@ -223,7 +228,7 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     rspec-core (2.14.5)
-    rspec-expectations (2.14.2)
+    rspec-expectations (2.14.3)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.3)
     rspec-rails (2.14.0)
@@ -241,7 +246,7 @@ GEM
       sexp_processor (~> 4.1)
     russian (0.6.0)
       i18n (>= 0.5.0)
-    sass (3.2.10)
+    sass (3.2.11)
     sass-rails (4.0.0)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
@@ -250,7 +255,7 @@ GEM
       json (>= 1.1.3)
       rdoc (~> 3.10)
     sexp_processor (4.3.0)
-    shoulda-matchers (2.3.0)
+    shoulda-matchers (2.4.0)
       activesupport (>= 3.0.0)
     simple_form (3.0.0)
       actionpack (>= 4.0.0, < 4.1)
@@ -272,7 +277,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    temple (0.6.6)
+    temple (0.6.7)
     term-ansicolor (1.2.2)
       tins (~> 0.8)
     terminal-table (1.4.5)
@@ -280,8 +285,8 @@ GEM
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
-    tins (0.10.0)
-    treetop (1.4.14)
+    tins (0.11.0)
+    treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     turbolinks (1.3.0)
@@ -309,7 +314,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass!
   brakeman
-  bxslider-rails
+  bxslider-rails!
   capistrano-puma
   capistrano-rails (~> 0.0.7)
   capistrano-rbenv
