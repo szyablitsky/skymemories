@@ -3,7 +3,7 @@ require 'capistrano-puma'
 require 'bundler/capistrano'
 require 'new_relic/recipes'
 
-set :application, 'sky_memories'
+set :application, 'sm.finch.pro'
 set :repository,  'git@github.com:szyablitsky/skymemories.git'
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
