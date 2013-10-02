@@ -55,6 +55,7 @@ gem 'simple_form'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'newrelic_rpm'
 gem 'pace-rails'
+gem 'bxslider-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

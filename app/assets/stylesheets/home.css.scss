@@ -25,3 +25,13 @@
 #home-contacts {
   padding: $section-padding 0;
 }
+
+.bx-wrapper {
+  .bx-viewport {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    left: 0;
+  }
+}

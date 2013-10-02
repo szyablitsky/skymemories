@@ -3,23 +3,24 @@ en:
     "yes": 'Yes'
     "no": 'No'
     required:
-      text: 'reauired'
+      text: 'required'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "There is a problems with this form"
-    # Labels and hints
+      default_message: "Please review the problems below:"
+    # Labels and hints examples
     # labels:
     #   defaults:
-    #     password: 'Пароль'
+    #     password: 'Password'
     #   user:
     #     new:
-    #       email: 'Адрес электронной почты'
+    #       email: 'E-mail to sign in.'
     #     edit:
-    #       email: 'Адрес электронной почты'
+    #       email: 'E-mail.'
     # hints:
     #   defaults:
-    #     password: 'Минимум 6 символов'
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
 

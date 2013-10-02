@@ -2,6 +2,7 @@
  *= require_self
  *= require bootstrap
  *= require pace/pace-theme-minimal
+ *= require bxslider
 
  *= require typography
  *= require layout

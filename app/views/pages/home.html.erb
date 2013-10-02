@@ -1,16 +1,24 @@
 <% content_for :banner do %>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-sm-12 col-md-5 col-lg-4">
       <div id="call-to-action">
-        <h1>Детям будущего посвещаяется</h1>
-        <p>Семейные фильмы и что-то еще</p>
-        <p><strong>The secret is trust.</strong> The most important thing when hiring developers and designers is that you have confidende in the people building your application.</p>
-        <p><strong>Welcome to Sky Memeories.</strong> We help you work and communicate more efficiently by creating reliable software that supports your business.</p>
-        <%= link_to "Напишите нам", contact_path, class: "btn btn-primary" %>
+        <h1>Самые важные события вашей жизни всегда будут с вами</h1>
+        <p class="lead">Вы сможете показать их вашим детям, когда они вырастут</p>
+        <%= link_to "Свяжитесь с нами", contact_path, class: "btn btn-primary btn-lg" %>
       </div>
     </div>
-    <div class="col-md-8">
-      <iframe src="http://player.vimeo.com/video/16391352?title=0&amp;byline=0&amp;portrait=0&amp;color=87c9ed" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    <div class="col-sm-12 col-md-7 col-lg-8">
+      <ul class="bxslider">
+        <li>
+          <iframe src="http://player.vimeo.com/video/16391352?title=0&amp;byline=0&amp;portrait=0&amp;color=87c9ed" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </li>
+        <li>
+          <iframe src="http://player.vimeo.com/video/75839976?title=0&amp;byline=0&amp;portrait=0&amp;color=87c9ed" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </li>
+        <li>
+          <iframe src="http://player.vimeo.com/video/74767537?title=0&amp;byline=0&amp;portrait=0&amp;color=87c9ed" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </li>
+      </ul>
     </div>
   </div>
 <% end %>
@@ -19,7 +27,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="text-center">You have the idea. We have the solution.</h2>
+        <h2 class="text-center">Семейный видеограф</h2>
       </div>
     </div>
     <div class="row">
