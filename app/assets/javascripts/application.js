@@ -16,6 +16,7 @@
 //= require jquery.fitvids
 //= require jquery_ujs
 //= require bxslider
+//= require froogaloop
 //= require turbolinks
 //= require bootstrap/transition
 //= require bootstrap/collapse
