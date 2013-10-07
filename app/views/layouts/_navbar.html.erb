@@ -9,16 +9,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="/" class="navbar-brand">Sky Memeories</a>
+        <%= link_to "Sky Memeories", root_path, class: "navbar-brand" %>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li><%= link_to "Блог", "#" %></li>
-          <li><%= link_to "О студии", about_path %></li>
-          <li><%= link_to "Контакты", contact_path %></li>
+          <% if I18n.locale == :ru %>
+            <li><%= link_to "Блог", "#" %></li>
+          <% end %>
+          <li><%= link_to t('.about'), about_path %></li>
+          <li><%= link_to t('.contact'), contact_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <%= render "layouts/locale" if current_page?(root_url) %>
+          <%= locale_menu if localized_page? %>
           <% if signed_in? %>
             <%= render "layouts/user" %>
             <%= render "layouts/tools" %>

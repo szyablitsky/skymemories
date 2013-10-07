@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="<%= I18n.locale %>">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,10 +24,10 @@
 
 <% if current_page?(root_url) %>
   <%= yield %>
-<% else %>      
+<% else %>
   <%= yield :map %>
   <%= render "layouts/main" %>
-<% end %>      
+<% end %> 
 
 <%= render 'layouts/footer' %>
 

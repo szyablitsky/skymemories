@@ -42,6 +42,7 @@ end
 
 gem 'pg'
 gem 'puma'
+# gem 'rails-i18n'
 gem 'russian'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'

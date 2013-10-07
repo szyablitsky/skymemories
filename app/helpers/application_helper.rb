@@ -10,16 +10,26 @@ module ApplicationHelper
     end
   end
 
-  #gravatar
-  def gravatar_for(user, options={})
-    options['alt'] ||= user.name
-    options['class'] ||= 'gravatar'
-    gravatar_image_tag(user.email, options)
-  end
-
-  #locale
   def locale_name(locale)
     LOCALE_NAMES[locale]
   end
+
+  def localized_page?
+    params[:controller] == 'pages'
+  end
+
+  def locale_menu
+    raw LOCALE_NAMES.map { |locale, locale_name|
+      content_tag :li, class: locale_class(locale) do
+        link_to locale_name, "#{locale}"
+      end 
+    }.join
+  end
+
+  private
+
+    def locale_class locale
+      "active" if I18n.locale == locale.to_sym
+    end
 
 end

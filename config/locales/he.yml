@@ -1,0 +1,10 @@
+he:
+  layouts:
+    navbar:
+      about: О студии (he)
+      contact: Контакты (he)
+  pages:
+    about:
+      title: О студии (he)
+    contact:
+      title: Контакты (he)

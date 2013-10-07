@@ -14,3 +14,4 @@
 * [widget encapsulation](https://github.com/apotonick/cells/)
 * [use cases for controllers (Wisper gem)](https://github.com/krisleech/wisper)
 * [VisualWebsiteOptimizer](http://visualwebsiteoptimizer.com/)
+* [Adaptive images](https://github.com/scottjehl/picturefill)
