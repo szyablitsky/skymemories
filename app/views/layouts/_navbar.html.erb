@@ -16,8 +16,14 @@
           <% if I18n.locale == :ru %>
             <li><%= link_to "Блог", "#" %></li>
           <% end %>
-          <li><%= link_to t('.about'), about_path %></li>
-          <li><%= link_to t('.contact'), contact_path %></li>
+          <% li_class = current_page?(about_path) ? "active" : nil %>
+          <li class="<%= li_class %>">
+            <%= link_to t(".about"), about_path%>
+          </li>
+          <% li_class = current_page?(contact_path) ? "active" : nil %>
+          <li class="<%= li_class %>">
+            <%= link_to t(".contact"), contact_path %>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <%= locale_menu if localized_page? %>

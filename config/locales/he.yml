@@ -1,10 +1,10 @@
 he:
   layouts:
     navbar:
-      about: О студии (he)
-      contact: Контакты (he)
+      about: עלינו
+      contact: ליצור קשר עם
   pages:
     about:
-      title: О студии (he)
+      title: עלינו
     contact:
-      title: Контакты (he)
+      title: ליצור קשר עם

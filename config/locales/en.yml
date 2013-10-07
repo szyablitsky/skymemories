@@ -2,9 +2,9 @@ en:
   layouts:
     navbar:
       about: About
-      contact: Contacts
+      contact: Contact
   pages:
     about:
       title: About
     contact:
-      title: Contacts
+      title: Contact

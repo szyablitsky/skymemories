@@ -13,6 +13,7 @@ group :development do
   gem 'capistrano-puma', require: false
   gem 'capistrano-rails', '~> 0.0.7'
   gem 'erd'
+  gem 'pace-rails'
 end
 
 group :development, :test do
@@ -42,7 +43,7 @@ end
 
 gem 'pg'
 gem 'puma'
-# gem 'rails-i18n'
+gem 'rails-i18n'
 gem 'russian'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
@@ -55,7 +56,6 @@ gem 'will_paginate'
 gem 'simple_form'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'newrelic_rpm'
-gem 'pace-rails'
 gem 'bxslider-rails', github: 'szyablitsky/bxslider-rails'
 
 group :doc do

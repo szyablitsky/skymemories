@@ -7,14 +7,14 @@
 <h1>Фильмы</h1>
 
 <% sort_and_add_locales(@locales).each do |locale, movies| %>
-  <section class="locale clearfix">
+  <section class="locale">
     <header>
       <%= locale_name(locale) %>
       <%= link_to "Добавить", new_movie_path(locale: locale) %>
     </header>
     
     <% if movies %>
-      <ul class="movies">
+      <ul class="movies clearfix">
         <%= render movies %>
       </ul>
     <% end %>

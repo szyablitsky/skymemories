@@ -21,7 +21,7 @@ module ApplicationHelper
   def locale_menu
     raw LOCALE_NAMES.map { |locale, locale_name|
       content_tag :li, class: locale_class(locale) do
-        link_to locale_name, "#{locale}"
+        link_to locale_name, locale: locale
       end 
     }.join
   end
