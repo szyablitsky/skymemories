@@ -13,7 +13,6 @@ group :development do
   gem 'capistrano-puma', require: false
   gem 'capistrano-rails', '~> 0.0.7'
   gem 'erd'
-  gem 'pace-rails'
 end
 
 group :development, :test do
@@ -21,6 +20,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'guard-rspec'#, '>= 3.0.0'
   gem 'faker'
+  gem 'pace-rails'
 end
 
 group :test do
