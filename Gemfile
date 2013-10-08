@@ -20,7 +20,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'guard-rspec'#, '>= 3.0.0'
   gem 'faker'
-  gem 'pace-rails'
 end
 
 group :test do
@@ -44,7 +43,6 @@ end
 gem 'pg'
 gem 'puma'
 gem 'rails-i18n'
-gem 'russian'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
@@ -57,6 +55,7 @@ gem 'simple_form'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'newrelic_rpm'
 gem 'bxslider-rails', github: 'szyablitsky/bxslider-rails'
+gem 'pace-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
