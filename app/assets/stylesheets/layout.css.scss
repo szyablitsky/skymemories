@@ -1,7 +1,8 @@
 @import 'constants';
 
 body {
-  background: image-url('paper.png') repeat $body-background;
+//  background: image-url('paper.png') repeat $body-background;
+  background-color: $body-background;
 }
 
 .center {
@@ -10,22 +11,27 @@ body {
   margin-right: auto;
 }
 
-#page-footer {
-  padding: $section-padding 0;
-  background-color: rgba(48, 48, 48, 0.63);
-  border-top: 1px gray solid;
-  color: $footer-color;
-  a {
-    color: $footer-link-color;
-    &:hover {
-      color: $footer-hover-link-color;
-    }
+#page-header {
+//  background: image-url('sky.jpg');
+  background-color: $light-blue-color;
+  padding-bottom: $section-padding;
+}
+
+#page-banner {
+  padding-top: $section-padding;
+  .lead {
+    margin-bottom: 0;
   }
+}
+
+#page-footer {
+  padding: $section-padding 0 2*$section-padding;
 }
 
 main {
   padding-top: $section-padding;
   padding-bottom: $section-padding;
+  background-color: $bluish-white-color;
 }
 
 // debug =======================================

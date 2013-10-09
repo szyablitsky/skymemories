@@ -1,8 +1,19 @@
 // --------------------------------------------------------------------------
+// Main colors
+// --------------------------------------------------------------------------
+
+$deep-blue-color:         #007cc2;
+$light-blue-color:        #81c9df;
+$white-blue-color:        #cfe1ed;
+$bluish-white-color:      #fef9ff;
+$orange-hilight-color:    #e2733e;
+
+// --------------------------------------------------------------------------
 // Typography
 // --------------------------------------------------------------------------
 
-$body-background:         #f1f1f1;
+
+$body-background:         $orange-hilight-color;
 
 $main-color:              #5f5f5f;
 $main-font-family:        'PT Serif', serif;
@@ -15,7 +26,7 @@ $hilight-dense-color:     #77f;
 $hilight-loose-color:     lighten($hilight-dense-color,10%);
 
 $footer-color:            #E0E0E0;
-$footer-link-color:       #96C6F0;
+$footer-link-color:       $footer-color;
 $footer-hover-link-color: #1D405E;
 
 // --------------------------------------------------------------------------

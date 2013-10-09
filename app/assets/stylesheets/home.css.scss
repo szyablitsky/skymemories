@@ -1,37 +1,45 @@
 @import "constants";
 
-#home-header {
-  background: image-url('sky.jpg');
-  padding-bottom: $section-padding;
-}
-
-#home-banner {
-  padding-top: $section-padding;
+#page-banner {
+  h1 {
+    font-family: inherit;
+    color: $bluish-white-color;
+    margin-top: $section-padding;
+    margin-bottom: $section-padding * 2;
+  }
 }
 
 #call-to-action {
   background-color: rgba(255,255,255,.5);
-  padding: $section-padding;
-}
+  padding: $section-padding; }
 
 #home-services {
-  padding: $section-padding 0;
-}
+  background-color: $bluish-white-color;
+  padding: $section-padding 0; }
 
 #home-courses {
+  background-color: $light-blue-color;
   padding: $section-padding 0;
-}
+  h2 {
+    color: $bluish-white-color;
+    margin-bottom: $section-padding; } }
 
 #home-contacts {
-  padding: $section-padding 0;
-}
+  background-color: $bluish-white-color;
+  padding: $section-padding 0; }
 
 .bx-wrapper {
+  margin-bottom: $section-padding;
   .bx-viewport {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     border: none;
-    left: 0;
-  }
-}
+    left: 0; }
+  .bx-pager.bx-default-pager {
+    a {
+      background-color: $bluish-white-color;
+      &:hover { 
+        background-color: $orange-hilight-color; }
+      &.active {
+        background-color: $deep-blue-color; } } } }
