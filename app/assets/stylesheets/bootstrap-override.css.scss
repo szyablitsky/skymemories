@@ -1,0 +1,32 @@
+//@import "bootstrap/bootstrap";
+@import "constants";
+
+// modifications
+
+.alert {
+  padding: 10px 15px;
+}
+
+$navbar-color: lighten($light-blue-color, 25%);
+$navbar-hover-color: $bluish-white-color;
+
+.navbar-default {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  margin-bottom: 0;
+  .navbar-nav > li > a,
+  .navbar-brand {
+    color: $navbar-color;
+    text-transform: uppercase;
+    &:hover {
+      color: $navbar-hover-color;
+    }
+  }
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:hover,
+  .navbar-nav > .active > a:focus {
+    color: $navbar-hover-color;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+  }
+}

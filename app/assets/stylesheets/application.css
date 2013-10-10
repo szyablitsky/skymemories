@@ -1,6 +1,7 @@
 /*
  *= require_self
- *= require bootstrap
+ *= require bootstrap/bootstrap
+ *= require bootstrap-override
  *= require pace/pace-theme-minimal
  *= require bxslider
 

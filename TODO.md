@@ -15,3 +15,7 @@
 * [use cases for controllers (Wisper gem)](https://github.com/krisleech/wisper)
 * [VisualWebsiteOptimizer](http://visualwebsiteoptimizer.com/)
 * [Adaptive images](https://github.com/scottjehl/picturefill)
+* [Fast deployment with Capistrano (Recap)](https://github.com/freerange/recap)
+* [Fast deployment without Capistrano (Whiskey Disk)](https://github.com/flogic/whiskey_disk)
+* [Locale from browser (http_accept_language)](https://github.com/iain/http_accept_language)
+* [Nginx config (h5bp)](https://github.com/h5bp/server-configs-nginx/blob/master/sites-available/example.com)

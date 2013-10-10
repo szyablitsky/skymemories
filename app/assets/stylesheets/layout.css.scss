@@ -1,7 +1,6 @@
 @import 'constants';
 
 body {
-//  background: image-url('paper.png') repeat $body-background;
   background-color: $body-background;
 }
 
@@ -11,16 +10,17 @@ body {
   margin-right: auto;
 }
 
+$header-bg-color: $light-blue-color;
+
 #page-header {
-//  background: image-url('sky.jpg');
-  background-color: $light-blue-color;
+  background-color: $header-bg-color;
   padding-bottom: $section-padding;
 }
 
 #page-banner {
-  padding-top: $section-padding;
   .lead {
     margin-bottom: 0;
+    color: lighten($header-bg-color, 15%);
   }
 }
 
@@ -32,6 +32,7 @@ main {
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   background-color: $bluish-white-color;
+  box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.5), inset 0 -5px 5px -5px rgba(200, 120, 60, 0.7);
 }
 
 // debug =======================================
