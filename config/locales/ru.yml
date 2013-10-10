@@ -4,8 +4,12 @@ ru:
     next_label: "&raquo;"
   layouts:
     navbar:
+      blog: Блог
       about: О студии
       contact: Контакты
+  blog:
+    index:
+      title: Blog
   pages:
     about:
       title: О студии

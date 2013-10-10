@@ -8,6 +8,7 @@ Skymemories::Application.routes.draw do
   
   resources :movies, except: [:show]
   resources :posts
+  resources :blog, only: [:index, :show]
   
   resources :users
   match 'register', to: 'users#new', via: :get

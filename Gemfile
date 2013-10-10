@@ -56,6 +56,7 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'newrelic_rpm'
 gem 'bxslider-rails', github: 'szyablitsky/bxslider-rails'
 gem 'pace-rails'
+gem 'nav_lynx', github: 'vigetlabs/nav_lynx'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
