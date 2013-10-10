@@ -7,5 +7,9 @@
       <li><%= link_to "Фильмы", movies_path %></li>
       <li><%= link_to "Пользователи", users_path %></li>
     <% end %>
+    <li class="divider"></li>
+    <li><%= link_to "Профиль", current_user %></li>
+    <li><%= link_to "Настройка", edit_user_path(current_user) %></li>
+    <li><%= link_to "Выйти", logout_path, method: "delete" %></li>
   </ul>
 </li>

@@ -14,17 +14,14 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
           <% if I18n.locale == :ru %>
-            <%= nav_link_to t(".blog"), blog_index_path, {}, selected_class: "active", wrapper: "li", url_segment: 1 %>
+            <%= nav_link_to t(".blog"), blog_index_path, {}, selected_class: "active", wrapper: "li", controller_segment: 1 %>
           <% end %>
           <%= nav_link_to t(".about"), about_path, {}, selected_class: "active", wrapper: "li" %>
           <%= nav_link_to t(".contact"), contact_path, {}, selected_class: "active", wrapper: "li" %>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <%= locale_menu if localized_page? %>
-          <% if signed_in? %>
-            <%= render "layouts/user" %>
-            <%= render "layouts/tools" %>
-          <% end %>
+          <%= render "layouts/tools" if signed_in? %>
         </ul>
       </div>
     </div>
