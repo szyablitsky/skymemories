@@ -4,8 +4,10 @@
   h1 {
     font-family: inherit;
     color: $bluish-white-color;
-    margin-top: $section-padding;
+    margin-top: $section-padding * 2;
     margin-bottom: $section-padding * 2;
+    text-shadow: -1px -1px 0 darken($light-blue-color, 10%), 1px 1px 0 lighten($light-blue-color, 10%);
+    font-size: 3em;
   }
 }
 

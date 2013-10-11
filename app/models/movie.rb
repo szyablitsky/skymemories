@@ -11,4 +11,6 @@ class Movie < ActiveRecord::Base
     self.all.order('main desc').group_by(&:locale)
   end
 
+  scope :by_locale, -> (locale) { where(locale: locale).order(:main) }
+
 end

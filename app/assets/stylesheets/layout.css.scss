@@ -17,8 +17,14 @@ $header-bg-color: $light-blue-color;
   padding-bottom: $section-padding;
 }
 
+#logo {
+  position: absolute;
+  top: 25px;
+}
+
 #page-banner {
   .lead {
+    margin-left: 80px;
     margin-bottom: 0;
     color: lighten($header-bg-color, 15%);
   }

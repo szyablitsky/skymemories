@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_back_or user
     else
-      #flash.now[:error] = 'Адрес электронной почты либо пароль неверны'
       flash[:error] = 'Адрес электронной почты либо пароль неверны'
       redirect_to login_path
     end

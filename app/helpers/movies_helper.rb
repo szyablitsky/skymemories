@@ -4,6 +4,10 @@ module MoviesHelper
     LOCALE_NAMES.map { |m| l = m[0]; [l, locales[l]] }
   end
 
+  def locale_name(locale)
+    LOCALE_NAMES[locale]
+  end
+
   def movie_class_for(movie)
     if movie.main
       "movie movie-main"
