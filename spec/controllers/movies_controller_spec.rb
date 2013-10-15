@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe MoviesController do
-  
+
   let(:movie) { FactoryGirl.create :movie }
   let(:valid_attributes) { FactoryGirl.attributes_for :movie }
-  let(:valid_session) { {} }
+  let(:valid_session) { { remember_token: FactoryGirl.attributes_for(:user)[:remember_token] } }
 
   describe "GET index" do
     it "assigns all movies as grouped @locales array" do

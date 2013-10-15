@@ -4,7 +4,7 @@ module PagesHelper
     count = -1
     raw movies.map { |movie|
       count += 1 
-      render 'pages/movie', count: count, id: movie.vimeo_id
+      render 'pages/movie', count: count, id: movie.vimeo_id, title: movie.title, src: movie.thumbnail.gsub('_100.','_960.')
     }.join
   end
 

@@ -5,9 +5,10 @@ pauseVideo = ($slideElement, oldIndex, newIndex) ->
 
 $(document).ready ->
   $(".bxslider").bxSlider
-    video: true
-    useCSS: false
-    onSlideBefore: pauseVideo
+    # video: true
+    # useCSS: false
+    captions: true
+    # onSlideBefore: pauseVideo
   # bxSlider item cloning workaround
   cloneFrame = $(".bxslider").children()[0]
   $(cloneFrame).find("iframe").attr("id",null)

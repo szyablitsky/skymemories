@@ -6,6 +6,13 @@ describe PostsController do
   let(:valid_attributes) { FactoryGirl.attributes_for :post }
   let(:valid_session) { {} }
 
+  let(:user) { FactoryGirl.create :user }
+  before do
+    cookies[:remember_token] = user.remember_token
+    user.update_attribute(:remember_token, User.encrypt(user.remember_token))
+  end
+
+
   describe "GET index" do
     it "assigns all posts as @posts" do
       get :index, {}, valid_session

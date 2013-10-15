@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-inner">
     <div class="container">
-      <img id="logo" alt="Logo" src="/assets/logo.png">
+      <%= image_tag "logo.png", id: "logo", alt: "Sky Memories logo" %>
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse"
                 data-target=".navbar-ex1-collapse">
@@ -21,7 +21,7 @@
           <%= nav_link_to t(".contact"), contact_path, {}, selected_class: "active", wrapper: "li" %>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <%= locale_menu if localized_page? %>
+          <%= locale_menu if false && localized_page? %>
           <%= render "layouts/tools" if signed_in? %>
         </ul>
       </div>
