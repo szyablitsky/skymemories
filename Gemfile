@@ -11,7 +11,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'capistrano-rbenv'
   gem 'capistrano-puma', require: false
-  gem 'capistrano-rails', '~> 0.0.7'
+  gem 'capistrano-rails'#, '~> 0.0.7'
   gem 'erd'
 end
 
@@ -47,7 +47,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 gem 'vimeo'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
