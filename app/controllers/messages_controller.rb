@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
 
   def create
+    
     flash[:success] = 'Your message was sucessfuly sent.'
     redirect_to contact_url
   end

@@ -20,6 +20,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'guard-rspec'#, '>= 3.0.0'
   gem 'guard-spork'
+  gem 'guard-puma'
   gem 'rb-inotify'
   gem 'libnotify'
   gem 'faker'
