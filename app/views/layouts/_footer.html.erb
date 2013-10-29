@@ -2,16 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <p>Детям будущего посвещается</p>
-        <p>&copy; 2013 студия семейного фильма <strong>Sky Memories</strong></p>
+        <p>&copy; 2013 <strong>Sky Memories</strong></p>
       </div>
       <div class="col-md-6">
         <p class="text-right"><%= link_to "Vimeo", "http://vimeo.com/skymemories" %></p>
         <p class="text-right"><%= link_to "Google+", "https://plus.google.com/u/0/100454286460822454868?rel=author" %></p>
         <% if !signed_in? %>
           <p class="text-right">
-            <%= link_to "[Вход]", login_path  %> |
-            <%= link_to "[Регистрация]", register_path %>
+            <%= link_to "[Вход]", login_path  %>
           </p>
         <% end %>
       </div>

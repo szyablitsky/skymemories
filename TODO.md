@@ -5,7 +5,6 @@
 * [social sharing](http://addthis.com/)
 * [readable urls](https://github.com/norman/friendly_id)
 * [markdown](https://github.com/tanoku/redcarpet)
-* [russian language](https://github.com/yaroslav/russian)
 * [recaptcha](https://github.com/ambethia/recaptcha)
 * [simple form](https://github.com/plataformatec/simple_form)
   need to find alternative compatible with Bootstrap 3

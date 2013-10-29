@@ -19,17 +19,18 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'guard-rspec'#, '>= 3.0.0'
+  gem 'guard-spork'
+  gem 'rb-inotify'
+  gem 'libnotify'
   gem 'faker'
+  gem 'coderay', '~> 1.0.9' # for guard, pry and better_errors compatibility
 end
 
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'rb-inotify'
-  gem 'libnotify'
   gem 'spork', '~> 1.0rc'
-  gem 'guard-spork'
   gem 'childprocess'
   gem 'coveralls', require: false
 end

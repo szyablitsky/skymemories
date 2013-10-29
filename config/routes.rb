@@ -6,12 +6,13 @@ Skymemories::Application.routes.draw do
     get 'contact', to: 'pages#contact'
   end
   
+  resources :blog, only: [:index, :show]
+
   resources :movies, except: [:show]
   resources :posts
-  resources :blog, only: [:index, :show]
-  
   resources :users
-  match 'register', to: 'users#new', via: :get
+
+  resources :messages, only: [:create]
   
   resources :sessions, only: [:new, :create, :destroy]
   match 'login',  to: 'sessions#new', via: :get

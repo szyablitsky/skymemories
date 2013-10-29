@@ -1,4 +1,4 @@
-<% provide :title, t(".contact") %>
+<% provide :title, t(".title") %>
 
 <% content_for :banner do %>
   <p class="lead"><i>Как связаться</i></p>
@@ -10,13 +10,13 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h1>Контакты</h1>
+    <h1><%= t(".title") %></h1>
   </div>
 </div>
 <div class="row">
   <div class="col-md-8">
     <p>Хотите работать нами? Воспользуйтесь формой ниже, чтобы отправить сообщение. Мы будем рабды обсудить с вами вопросы относительно фильма вашей мечты.</p>
-    <p>тут будет форма</p>
+    <%= render "contact_form" %>
   </div>
   <div class="col-md-4">
   	<address>

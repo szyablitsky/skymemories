@@ -11,7 +11,16 @@ ru:
     index:
       title: Blog
   pages:
+    home:
+      write_us_or_call: "Воспользуйтесь формой, чтобы написать нам. Вы можете также послать нам сообщение по электронной почте или позвонить."
+      address1: "Шевчука, 28ка, офис 421"
+      address2: "Хабаровск, Россия"
     about:
       title: О студии
     contact:
       title: Контакты
+    contact_form:
+      form_name: Ваше имя
+      form_email: Адрес электронной почты
+      form_msg: Сообщение
+      form_submit: Отправить

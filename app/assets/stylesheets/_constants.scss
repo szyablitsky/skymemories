@@ -13,7 +13,7 @@ $orange-hilight-color:    #e2733e;
 // --------------------------------------------------------------------------
 
 
-$body-background:         $orange-hilight-color;
+$body-background:         $bluish-white-color;
 
 $main-color:              #5f5f5f;
 $main-font-family:        'PT Serif', serif;
@@ -25,9 +25,9 @@ $header-font-family:      'Ubuntu', sans-serif;
 $hilight-dense-color:     #77f;
 $hilight-loose-color:     lighten($hilight-dense-color,10%);
 
-$footer-color:            #E0E0E0;
+$footer-color:            $main-color;
 $footer-link-color:       $footer-color;
-$footer-hover-link-color: #1D405E;
+$footer-hover-link-color: darken($footer-color,20%);
 
 // --------------------------------------------------------------------------
 // Layout

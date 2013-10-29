@@ -12,7 +12,6 @@ describe PostsController do
     user.update_attribute(:remember_token, User.encrypt(user.remember_token))
   end
 
-
   describe "GET index" do
     it "assigns all posts as @posts" do
       get :index, {}, valid_session

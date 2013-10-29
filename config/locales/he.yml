@@ -4,7 +4,16 @@ he:
       about: עלינו
       contact: ליצור קשר עם
   pages:
+    home:
+      write_us_or_call: Use the form to drop us a line. You can also send us a regular email or give us a call.
+      address1: "Shevchuka, 28ka, office 421"
+      address2: "Khabarovsk, Russia"
     about:
       title: עלינו
     contact:
       title: ליצור קשר עם
+    contact_form:
+      form_name: Name
+      form_email: Email address
+      form_msg: Message
+      form_submit: Send message
