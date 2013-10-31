@@ -14,6 +14,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="/touch-icon-ipad-retina.png" />
 </head>
 <body>
+<%= render "layouts/ga" if Rails.env.production? %>
 
 <div id="page-header">
   <%= render "layouts/navbar" %>
@@ -30,13 +31,6 @@
 <% end %> 
 
 <%= render 'layouts/footer' %>
-
-<%= if false && Rails.env.development? 
-      content_tag :div, class: "container" do
-        debug(params)
-      end
-    end
-%>
 
 </body>
 </html>

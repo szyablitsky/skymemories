@@ -59,14 +59,3 @@ gem 'newrelic_rpm'
 gem 'bxslider-rails', github: 'szyablitsky/bxslider-rails'
 gem 'pace-rails'
 gem 'nav_lynx', github: 'vigetlabs/nav_lynx'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]

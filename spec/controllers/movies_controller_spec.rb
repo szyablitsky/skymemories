@@ -6,6 +6,12 @@ describe MoviesController do
   let(:valid_attributes) { FactoryGirl.attributes_for :movie }
   let(:valid_session) { { remember_token: FactoryGirl.attributes_for(:user)[:remember_token] } }
 
+  let(:user) { FactoryGirl.create :user }
+  before do
+    cookies[:remember_token] = user.remember_token
+    user.update_attribute(:remember_token, User.encrypt(user.remember_token))
+  end
+
   describe "GET index" do
     it "assigns all movies as grouped @locales array" do
       get :index, {}, valid_session
