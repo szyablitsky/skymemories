@@ -28,5 +28,15 @@ module Skymemories
     config.i18n.default_locale = :ru
 
     config.autoload_paths += Dir["#{config.root}/app/services"]
+
+    config.action_mailer.smtp_settings = {
+      address: "smtp.yandex.ru",
+      port: 587,
+      domain: "skymemories.ru",
+      authentication: "plain",
+      user_name: "info@skymemories.ru",
+      password: ENV['SM_MAIL_PASSWORD'],
+      enable_starttls_auto: true
+    }
   end
 end

@@ -19,12 +19,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-        <h3 class="text-center">Что вы получите</h3>
+        <h2 class="text-center">Что вы получите</h3>
         <p>Комплексную услугу по сохранению семейной памяти. От съемки и создания фильмов и клипов, до хранения семейного видео на неограниченный срок.</p>
         <p>С огромной радостью и удовольствием мы помогаем поддерживать семейные традиции для счастья и радости, в помощь будущим поколениям.</p>
       </div>
       <div class="col-md-2">
-        <h3>&nbsp;</h3>
+        <h2>&nbsp;</h3>
         <%= image_tag "http://placehold.it/150/81c9df/ffffff&text=our+work+(vimeo)", class: "center" %>
       </div>
       <div class="col-md-5">
@@ -61,17 +61,15 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 arrange-top">
         <p><%= t(".write_us_or_call") %></p> 
-        <p>
-          Phone: +7 (924) 307-77-11<br>
-          Email: <%= mail_to "info@skymemories.ru" %>
-        </p>
+        <p>Phone: +7 (924) 307-77-11</p>
+        <p>Email: <%= mail_to "info@skymemories.ru" %></p>
       </div>
       <dvi class="col-md-6">
         <%= render "pages/contact_form" %>
       </dvi>
-      <div class="col-md-3">
+      <div class="col-md-3 arrange-top">
         <p>
           <strong>Sky Memories</strong><br>
           <%= t(".address1") %><br>

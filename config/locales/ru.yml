@@ -2,6 +2,9 @@ ru:
   will_paginate:
     previous_label: "&laquo;"
     next_label: "&raquo;"
+  message_notifier:
+    msg:
+      subject: "Сообщение с сайта skymemories.ru"
   layouts:
     navbar:
       blog: Блог
@@ -24,3 +27,6 @@ ru:
       form_email: Адрес электронной почты
       form_msg: Сообщение
       form_submit: Отправить
+  flash:
+    message:
+      success: "Ваше сообщение было отправлено."

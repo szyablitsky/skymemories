@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
 
   def create
-    
-    flash[:success] = 'Your message was sucessfuly sent.'
+    MessageNotifier.msg(message_params).deliver
+    flash[:success] = t('flash.message.success')
     redirect_to contact_url
   end
 

@@ -1,4 +1,7 @@
 he:
+  message_notifier:
+    msg:
+      subject: "Message from skymemories.ru website"
   layouts:
     navbar:
       about: עלינו
@@ -17,3 +20,6 @@ he:
       form_email: Email address
       form_msg: Message
       form_submit: Send message
+  flash:
+    message:
+      success: "Your message was sucessfuly sent."

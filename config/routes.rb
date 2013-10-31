@@ -4,6 +4,7 @@ Skymemories::Application.routes.draw do
     root 'pages#home'
     get 'about', to: 'pages#about'
     get 'contact', to: 'pages#contact'
+    resources :messages, only: [:create]
   end
   
   resources :blog, only: [:index, :show]
@@ -12,8 +13,6 @@ Skymemories::Application.routes.draw do
   resources :posts
   resources :users
 
-  resources :messages, only: [:create]
-  
   resources :sessions, only: [:new, :create, :destroy]
   match 'login',  to: 'sessions#new', via: :get
   match 'logout', to: 'sessions#destroy', via: :delete
