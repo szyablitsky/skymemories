@@ -1,5 +1,5 @@
 <% content_for :banner do %>
-  <h1 class="text-center">Уникальные истории</h1>
+  <h1 class="text-center">Уникальные истории которые меняют, радуют и объединяют</h1>
   <div class="row">
     <div class="col-sm-12 col-md-5 col-lg-4">
       <div id="call-to-action">
@@ -8,9 +8,10 @@
       </div>
     </div>
     <div class="col-sm-12 col-md-7 col-lg-8">
-      <ul class="bxslider">
-        <%= raw slider_content_for @movies %>
-      </ul>
+      <%= render "carousel" %>
+      <!-- <ul class="bxslider"> --> 
+        <%#= raw slider_content_for @movies %>
+      <!-- </ul> --> 
     </div>
   </div>
 <% end %>
@@ -28,7 +29,7 @@
         <%= image_tag "http://placehold.it/150/81c9df/ffffff&text=our+work+(vimeo)", class: "center" %>
       </div>
       <div class="col-md-5">
-        <h3 class="text-center">Зачем нужен семейный фильм</h3>
+        <h2 class="text-center">Зачем нужен семейный фильм</h2>
         <p>Каждому ребенку нужны папа и мама, которые любят его и заботятся о нем. Такой опыт, вынесенный из детства, поможет ребенку в будущем создать гармоничные отношения уже в своей семье. Семейный фильм - это уникальный живой портрет, в котором просматриваются характеры близких и родных людей. В ходе съемки и последующего монтажа мы стремимся отразить образ семейного тепла, что бы дети в будущем смогли увидеть себя в фильме и почувствовать единство со своей семьей.</p>
       </div>
     </div>
@@ -67,7 +68,7 @@
         <p>Email: <%= mail_to "info@skymemories.ru" %></p>
       </div>
       <dvi class="col-md-6">
-        <%= render "pages/contact_form" %>
+        <%= render "contact_form" %>
       </dvi>
       <div class="col-md-3 arrange-top">
         <p>

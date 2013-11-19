@@ -1,7 +1,8 @@
 @import 'constants';
 
 body {
-  background-color: $body-background;
+  background: image_url('bg.png');
+  //background-color: $body-background;
 }
 
 .center {
@@ -13,7 +14,7 @@ body {
 $header-bg-color: $light-blue-color;
 
 #page-header {
-  background-color: $header-bg-color;
+  //background-color: $header-bg-color;
   padding-bottom: $section-padding;
 }
 

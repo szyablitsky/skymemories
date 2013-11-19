@@ -3,10 +3,11 @@
 footer#page-footer {
   font-size: 0.8em;
   color: $footer-color;
+  text-shadow: 1px 1px rgba(91, 108, 126, 0.5);
   a {
     color: $footer-link-color;
     &:hover {
-      color: $footer-hover-link-color;
+      //color: $footer-hover-link-color;
     }
   }
 }

@@ -16,6 +16,7 @@
 //= require jquery.fitvids
 //= require jquery_ujs
 //= require bxslider
+//= require fancybox
 //= require froogaloop
 //= require turbolinks
 //= require bootstrap/transition
@@ -25,5 +26,6 @@
 //= require bootstrap/tooltip
 //= require bootstrap/popover
 //= require bootstrap/dropdown
+//= require bootstrap/carousel
 //= require pace/pace
 //= require_tree .

@@ -25,9 +25,9 @@ $header-font-family:      'Ubuntu', sans-serif;
 $hilight-dense-color:     #77f;
 $hilight-loose-color:     lighten($hilight-dense-color,10%);
 
-$footer-color:            $main-color;
+$footer-color:            $bluish-white-color;
 $footer-link-color:       $footer-color;
-$footer-hover-link-color: darken($footer-color,20%);
+$footer-hover-link-color: $white-blue-color;
 
 // --------------------------------------------------------------------------
 // Layout

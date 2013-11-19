@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.1'
 
 group :development do
   gem 'brakeman'
@@ -37,15 +37,15 @@ group :test do
 end
 
 group :assets do
-  gem 'sass-rails', '~> 4.0.0'
+  gem 'sass-rails'#, '~> 4.0.0'
   gem 'uglifier', '>= 1.3.0'
-  gem 'coffee-rails', '~> 4.0.0'
+  gem 'coffee-rails'#, '~> 4.0.0'
 end
 
 gem 'pg'
 gem 'puma'
 gem 'rails-i18n'
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'#, '~> 3.0.0'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
@@ -59,3 +59,4 @@ gem 'newrelic_rpm'
 gem 'bxslider-rails', github: 'szyablitsky/bxslider-rails'
 gem 'pace-rails'
 gem 'nav_lynx', github: 'vigetlabs/nav_lynx'
+gem 'fancybox2-rails'
