@@ -11,14 +11,14 @@ group :development do
   gem 'binding_of_caller'
   gem 'capistrano-rbenv'
   gem 'capistrano-puma', require: false
-  gem 'capistrano-rails'#, '~> 0.0.7'
+  gem 'capistrano-rails'
   gem 'erd'
 end
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'guard-rspec'#, '>= 3.0.0'
+  gem 'guard-rspec'
   gem 'guard-spork'
   gem 'guard-puma'
   gem 'rb-inotify'
@@ -37,15 +37,15 @@ group :test do
 end
 
 group :assets do
-  gem 'sass-rails'#, '~> 4.0.0'
+  gem 'sass-rails'
   gem 'uglifier', '>= 1.3.0'
-  gem 'coffee-rails'#, '~> 4.0.0'
+  gem 'coffee-rails'
 end
 
 gem 'pg'
 gem 'puma'
 gem 'rails-i18n'
-gem 'bcrypt-ruby'#, '~> 3.0.0'
+gem 'bcrypt-ruby'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
