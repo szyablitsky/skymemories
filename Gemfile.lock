@@ -12,14 +12,6 @@ GIT
     bxslider-rails (4.1.0)
 
 GIT
-  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: 0e88056ac5d58fb0bbd23d3fe929eac01712d964
-  branch: 3
-  specs:
-    bootstrap-sass (3.0.0.0)
-      sass (~> 3.2)
-
-GIT
   remote: git://github.com/vigetlabs/nav_lynx.git
   revision: 00ae77191c47f5ef29551fbd6f070d1dc75e30b1
   specs:
@@ -61,6 +53,8 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.0.3.0)
+      sass (~> 3.2)
     brakeman (2.2.0)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
@@ -339,7 +333,7 @@ DEPENDENCIES
   bcrypt-ruby
   better_errors
   binding_of_caller
-  bootstrap-sass!
+  bootstrap-sass
   brakeman
   bxslider-rails!
   capistrano-puma
