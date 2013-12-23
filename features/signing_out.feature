@@ -1,4 +1,4 @@
-Feature: Signing outn
+Feature: Signing out
 
   Scenario: Successful signout
     Given the user has an account

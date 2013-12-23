@@ -24,7 +24,7 @@ group :development, :test do
   gem 'rb-inotify'
   gem 'libnotify'
   gem 'faker'
-  gem 'coderay', '~> 1.0.9' # for guard, pry and better_errors compatibility
+  gem 'coderay'#, '~> 1.0.9' # for guard, pry and better_errors compatibility
 end
 
 group :test do
@@ -38,7 +38,7 @@ end
 
 group :assets do
   gem 'sass-rails'
-  gem 'uglifier', '>= 1.3.0'
+  gem 'uglifier'
   gem 'coffee-rails'
 end
 
@@ -54,9 +54,9 @@ gem 'vimeo'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'simple_form'
-gem 'bootstrap-sass'#, github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+gem 'bootstrap-sass'
 gem 'newrelic_rpm'
-gem 'bxslider-rails', github: 'szyablitsky/bxslider-rails'
+#gem 'bxslider-rails', github: 'szyablitsky/bxslider-rails'
 gem 'pace-rails'
 gem 'nav_lynx', github: 'vigetlabs/nav_lynx'
 gem 'fancybox2-rails', github: 'kyparn/fancybox2-rails'

@@ -6,12 +6,6 @@ GIT
       railties (>= 3.1.0)
 
 GIT
-  remote: git://github.com/szyablitsky/bxslider-rails.git
-  revision: b3c2e2724f3d2b2ced9550fe4f538f45d22d9ee1
-  specs:
-    bxslider-rails (4.1.0)
-
-GIT
   remote: git://github.com/vigetlabs/nav_lynx.git
   revision: 00ae77191c47f5ef29551fbd6f070d1dc75e30b1
   specs:
@@ -48,7 +42,7 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    better_errors (1.0.1)
+    better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
@@ -93,7 +87,7 @@ GEM
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
     choice (0.1.6)
-    coderay (1.0.9)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -139,7 +133,7 @@ GEM
     gherkin (2.12.1)
       multi_json (~> 1.3)
     gravatar_image_tag (1.2.0)
-    guard (2.2.4)
+    guard (2.2.5)
       formatador (>= 0.2.4)
       listen (~> 2.1)
       lumberjack (~> 1.0)
@@ -166,7 +160,7 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.3.4.1)
     i18n (0.6.9)
-    jbuilder (1.5.3)
+    jbuilder (2.0.1)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
     jquery-rails (3.0.4)
@@ -197,13 +191,13 @@ GEM
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
-    newrelic_rpm (3.7.0.177)
+    newrelic_rpm (3.7.1.180)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     oauth (0.4.7)
     pace-rails (0.0.8)
       jquery-rails
-    pg (0.17.0)
+    pg (0.17.1)
     polyglot (0.3.3)
     pry (0.9.12.4)
       coderay (~> 1.0)
@@ -229,15 +223,15 @@ GEM
       activesupport (>= 3.0)
       choice (~> 0.1.6)
       ruby-graphviz (~> 1.0.4)
-    rails-i18n (4.0.0)
+    rails-i18n (4.0.1)
       i18n (~> 0.6)
-      rails (~> 4.0.0)
+      rails (~> 4.0)
     railties (4.0.2)
       actionpack (= 4.0.2)
       activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.1.0)
+    rake (10.1.1)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
@@ -310,10 +304,10 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.0.0)
+    turbolinks (2.1.0)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.3.3)
+    uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     vimeo (1.5.3)
@@ -335,12 +329,11 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   brakeman
-  bxslider-rails!
   capistrano-puma
   capistrano-rails
   capistrano-rbenv
   childprocess
-  coderay (~> 1.0.9)
+  coderay
   coffee-rails
   coveralls
   cucumber-rails
@@ -372,6 +365,6 @@ DEPENDENCIES
   simple_form
   spork (~> 1.0rc)
   turbolinks
-  uglifier (>= 1.3.0)
+  uglifier
   vimeo
   will_paginate
