@@ -3,9 +3,6 @@
  *= require bootstrap/bootstrap
  *= require bootstrap-override
  *= require pace/pace-theme-minimal
-*/ 
-/* require bxslider */
-/*
  *= require fancybox
 
  *= require typography

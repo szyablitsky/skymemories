@@ -15,7 +15,6 @@
 //= require jquery.turbolinks
 //= require jquery.fitvids
 //= require jquery_ujs
-// require bxslider
 //= require fancybox
 //= require froogaloop
 //= require turbolinks
