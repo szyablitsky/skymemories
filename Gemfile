@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.3'
 
 group :development do
   gem 'brakeman'
@@ -8,9 +8,9 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
   gem 'capistrano-puma', require: false
   gem 'capistrano-rails'
-  gem 'erd'
 end
 
 group :development, :test do
@@ -22,7 +22,7 @@ group :development, :test do
   gem 'rb-inotify'
   gem 'libnotify'
   gem 'faker'
-  gem 'coderay'#, '~> 1.0.9' # for guard, pry and better_errors compatibility
+#  gem 'coderay'#, '~> 1.0.9' # for guard, pry and better_errors compatibility
 end
 
 group :test do
@@ -30,7 +30,7 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'spork', '~> 1.0rc'
-  gem 'childprocess'
+#  gem 'childprocess'
   gem 'coveralls', require: false
 end
 

@@ -15,11 +15,14 @@ test: &test
   database: sm_test
   username: postgres
 
-production:
+production: &production
   <<: *connection
   database: sm_prod
   username: sm_prod
   password: <%= ENV['SM_DB_PASSWORD'] %>
+
+staging:
+  <<: *production
 
 cucumber:
   <<: *test
