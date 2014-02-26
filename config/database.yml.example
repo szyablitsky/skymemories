@@ -19,7 +19,7 @@ production: &production
   <<: *connection
   database: sm_prod
   username: sm_prod
-  password: <%= ENV['SM_DB_PASSWORD'] %>
+  password: 
 
 staging:
   <<: *production
