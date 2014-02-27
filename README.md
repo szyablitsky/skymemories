@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/szyablitsky/skymemories.png)](https://codeclimate.com/github/szyablitsky/skymemories)
 [![Coverage Status](https://coveralls.io/repos/szyablitsky/skymemories/badge.png)](https://coveralls.io/r/szyablitsky/skymemories)
 
-SkyMemories movie stubio website.
+SkyMemories movie studio website.
 
 Built with Rails 4, Ruby 2, Bootstrap 3.  
 Tested with RSpec, Cucumber.

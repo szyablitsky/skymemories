@@ -11,6 +11,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-puma', require: false
   gem 'capistrano-rails'
+#  gem 'cap-newrelic'
 end
 
 group :development, :test do
@@ -22,7 +23,6 @@ group :development, :test do
   gem 'rb-inotify'
   gem 'libnotify'
   gem 'faker'
-#  gem 'coderay'#, '~> 1.0.9' # for guard, pry and better_errors compatibility
 end
 
 group :test do
@@ -30,7 +30,6 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'spork', '~> 1.0rc'
-#  gem 'childprocess'
   gem 'coveralls', require: false
 end
 

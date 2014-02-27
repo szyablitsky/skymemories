@@ -9,11 +9,9 @@ set :default_env, { path: "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH" }
 
 set :keep_releases, 5
 
-set :linked_files, %w{config/database.yml newrelic.yml}
+set :linked_files, %w{config/database.yml config/application.yml newrelic.yml}
 
-# set :bundle_dir, ''
-# set :bundle_flags, '--system --quiet'
-# set :bundle_without,  [:test, :development]
+# set :new_relic_app_name, 'Sky Memories'
 
 # Default value for :pty is false
 # set :pty, true
