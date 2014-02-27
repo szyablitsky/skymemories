@@ -27,4 +27,5 @@
 //= require bootstrap/dropdown
 //= require bootstrap/carousel
 //= require pace/pace
+//= require analytics
 //= require_tree .

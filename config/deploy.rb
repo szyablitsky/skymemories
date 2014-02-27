@@ -7,6 +7,10 @@ set :branch, 'master'
 
 set :default_env, { path: "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH" }
 
+set :keep_releases, 5
+
+set :linked_files, %w{config/database.yml newrelic.yml}
+
 # set :bundle_dir, ''
 # set :bundle_flags, '--system --quiet'
 # set :bundle_without,  [:test, :development]
@@ -14,14 +18,8 @@ set :default_env, { path: "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH" }
 # Default value for :pty is false
 # set :pty, true
 
-# Default value for :linked_files is []
-# set :linked_files, %w{config/database.yml}
-
 # Default value for linked_dirs is []
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-
-# Default value for keep_releases is 5
-# set :keep_releases, 5
 
 namespace :deploy do
 
