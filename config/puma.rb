@@ -2,7 +2,7 @@
 
 quiet
 daemonize
-threads         0, 4
+threads         0, 16
 workers         1
 environment     'production'
 bind            'unix:///home/finch/tmp/sm_finch_pro.sock'

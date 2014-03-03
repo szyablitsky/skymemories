@@ -32,25 +32,9 @@ module Skymemories
 
     # smtp_settings = YAML.load_file('config/application.yml')['smtp_settings'].to_options
 
-    config.action_mailer.smtp_settings =
-      YAML.load_file('config/application.yml')['smtp_settings'].to_options
-    # {
-    #   address:              smtp_settings['address'],
-    #   port:                 smtp_settings['port'],
-    #   domain:               smtp_settings['domain'],
-    #   authentication:       smtp_settings['authentication'],
-    #   user_name:            smtp_settings['user_name'],
-    #   password:             smtp_settings['password'],
-    #   enable_starttls_auto: smtp_settings['enable_starttls_auto']
-    # }
-    # {
-    #   address: "smtp.yandex.ru",
-    #   port: 587,
-    #   domain: "skymemories.ru",
-    #   authentication: "plain",
-    #   user_name: "info@skymemories.ru",
-    #   password: ENV['SM_MAIL_PASSWORD'],
-    #   enable_starttls_auto: true
-    # }
+    if !Rails.env.test?
+      config.action_mailer.smtp_settings =
+        YAML.load_file('config/application.yml')['smtp_settings'].to_options
+    end
   end
 end
