@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.3'
+gem 'rails', '4.0.4'
 
 group :development do
   gem 'brakeman'
@@ -11,7 +11,6 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-puma', require: false
   gem 'capistrano-rails'
-#  gem 'cap-newrelic'
 end
 
 group :development, :test do
@@ -34,7 +33,7 @@ group :test do
 end
 
 group :assets do
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 4.0.2'
   gem 'uglifier'
   gem 'coffee-rails'
 end
