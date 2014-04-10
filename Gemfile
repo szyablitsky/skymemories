@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.0'
 
 group :development do
   gem 'brakeman'
@@ -27,6 +27,7 @@ end
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'minitest'
   gem 'shoulda-matchers'
   gem 'spork', '~> 1.0rc'
   gem 'coveralls', require: false
@@ -41,7 +42,7 @@ end
 gem 'pg'
 gem 'puma'
 gem 'rails-i18n'
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'

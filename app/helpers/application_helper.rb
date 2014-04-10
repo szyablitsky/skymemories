@@ -25,8 +25,8 @@ module ApplicationHelper
   def flash_decode name
     'alert-' +
     case name
-      when :error then 'danger'
-      when :notice then 'info'
+      when 'error' then 'danger'
+      when 'notice' then 'info'
       else name.to_s
     end
   end
