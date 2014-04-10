@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20130816051159) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "movies", force: true do |t|
     t.integer  "vimeo_id"
     t.string   "locale"
