@@ -34,7 +34,7 @@ group :test do
 end
 
 group :assets do
-  gem 'sass-rails', '>= 4.0.2'
+  gem 'sass-rails'
   gem 'uglifier'
   gem 'coffee-rails'
 end
