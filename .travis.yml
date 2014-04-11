@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.1.1
 script: 
-  - rake db:schema:load RAILS_ENV=test
+  - bundle exec rake db:schema:load RAILS_ENV=test
   - bundle exec rake
 before_script:
   - psql -c 'create database sm_test;' -U postgres
