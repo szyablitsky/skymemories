@@ -1,6 +1,6 @@
 <% provide(:title, 'Вход') %>
 <h1>Вход</h1>
-<%= simple_form_for :session, url: sessions_path, html: {class: 'form-horizontal'} do |f| %>
+<%= bootstrap_form_for :session, url: sessions_path, html: {class: 'form-horizontal'} do |f| %>
 
   <div class="field">
     <%= f.label :email, 'Адрес электронной почты' %><br>
