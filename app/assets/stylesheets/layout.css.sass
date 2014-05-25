@@ -1,0 +1,38 @@
+@import 'constants'
+
+body
+  background: image_url('giftly.png')
+  background-color: $body-background
+
+hr
+  height: 2px
+  background: transparent
+  border: 1px solid rgba(224, 224, 224, 1)
+
+#page-header
+  padding-bottom: 3em
+  #logo
+    margin-top: 30px
+  ul
+    margin-top: 40px
+    list-style-type: none
+    padding: 0
+    li
+      font-size: 0.7em
+      text-transform: uppercase
+      display: inline-block
+      padding: 10px
+      a
+        color: $header-color
+        &:visited
+          color: $header-color
+
+  hr
+    margin-top: 30px
+
+#page-banner
+  //
+
+footer#page-footer
+  margin: 3em 0 3em
+  font-size: 0.8em

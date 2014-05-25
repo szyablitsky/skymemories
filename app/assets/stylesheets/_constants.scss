@@ -2,32 +2,19 @@
 // Main colors
 // --------------------------------------------------------------------------
 
-$deep-blue-color:         #007cc2;
-$light-blue-color:        #81c9df;
-$white-blue-color:        #cfe1ed;
-$bluish-white-color:      #fef9ff;
-$orange-hilight-color:    #e2733e;
+// $deep-blue-color:         #007cc2;
+$body-background: rgba(247, 247, 247, 1);
 
 // --------------------------------------------------------------------------
 // Typography
 // --------------------------------------------------------------------------
 
+$main-color:       #484848;
+$main-font-family: /*'Neue Helvetica', */'Open Sans', serif;
+$main-font-size:   16px;
+$main-line-height: $main-font-size * 1.5;
 
-$body-background:         $bluish-white-color;
-
-$main-color:              #5f5f5f;
-$main-font-family:        'PT Serif', serif;
-$main-font-size:          16px;
-$main-line-height:        $main-font-size * 1.5;
-
-$header-font-family:      'Ubuntu', sans-serif;
-
-$hilight-dense-color:     #77f;
-$hilight-loose-color:     lighten($hilight-dense-color,10%);
-
-$footer-color:            $bluish-white-color;
-$footer-link-color:       $footer-color;
-$footer-hover-link-color: $white-blue-color;
+$header-color:     #127cc2;
 
 // --------------------------------------------------------------------------
 // Layout
