@@ -2,15 +2,15 @@
   nav.row
     .col-md-3
         = link_to root_path do
-          = image_tag "logo.png", id: "logo", alt: "Sky Memories logo"
+          = image_tag 'logo.png', id: 'logo', alt: 'Sky Memories logo'
     .col-md-6
       ul.text-center
+        li = link_to t('.about'), about_path
         - if I18n.locale == :ru
-          = nav_link_to t(".blog"), blog_index_path, {}, selected_class: "active", wrapper: "li", controller_segment: 1
-        = nav_link_to t(".about"), about_path, {}, selected_class: "active", wrapper: "li"
-        = nav_link_to t(".contact"), contact_path, {}, selected_class: "active", wrapper: "li"
+          li = link_to t('.blog'), blog_index_path
+        li = link_to t('.contact'), contact_path, class: 'contact'
     .col.md-3
       ul.pull-right
         = locale_menu if false && localized_page?
-        = render "layouts/tools" if signed_in?
+        = render 'layouts/tools' if signed_in?
   hr

@@ -3,21 +3,9 @@ pauseVideo = ($slideElement, oldIndex, newIndex) ->
   player = Froogaloop(iframe)
   player.api('pause')
 
-$(document).ready ->
-  # bxslider
-  $('.bxslider').bxSlider
-    # video: true
-    # useCSS: false
-    captions: true
-    # onSlideBefore: pauseVideo
-  # bxSlider item cloning workaround
-  cloneFrame = $('.bxslider').children()[0]
-  $(cloneFrame).find('iframe').attr('id',null)
-  # fancybox
-  $('.fancybox-media').fancybox
-    openEffect: 'none'
-    closeEffect: 'none'
-    helpers:
-      media:
-        {}
-  $('.carousel').carousel()
+$ ->
+  $('#vimeo').fitVids()
+
+  $('#movie-list').on 'click', '.vimeo', (e) ->
+    small_id = 1 
+

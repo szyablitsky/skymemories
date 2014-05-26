@@ -7,9 +7,9 @@ ru:
       subject: "Сообщение с сайта skymemories.ru"
   layouts:
     navbar:
-      blog: Блог
+      blog: Информация
       about: О студии
-      contact: Контакты
+      contact: Напишите нам
   blog:
     index:
       title: Blog

@@ -23,10 +23,20 @@
 
 .vimeo
   margin-bottom: 3em
+  cursor: pointer
+  img
+    -webkit-transition: -webkit-transform 0.1s
+    transition: -webkit-transform 0.1s
+  &:hover img
+    -webkit-transform: scale(1.01)
+    transform: scale(1.01)
+  img
+    display: block
+    height: auto
+    max-width: 100%
   h1
-    text-transform: uppercase
     color: $header-color
-    font-size: 1em
+    font-size: 1.1em
     line-height: 1.5
   p
     font-size: 0.8em

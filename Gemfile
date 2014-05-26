@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 gem 'rails', '4.1.1'
+gem 'puma'
 gem 'pg'
 
 gem "slim-rails"
@@ -16,20 +17,17 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
+gem 'pace-rails'
+gem 'fitvidsjs_rails'
 
 gem 'bootstrap_form'
-gem 'nav_lynx'
 gem 'gravatar_image_tag'
 
-gem 'puma'
 gem 'rails-i18n'
 gem 'bcrypt'
 gem 'vimeo'
 gem 'will_paginate'
 gem 'newrelic_rpm'
-#gem 'bxslider-rails', github: 'szyablitsky/bxslider-rails'
-gem 'pace-rails'
-gem 'fancybox2-rails', github: 'kyparn/fancybox2-rails'
 
 group :development do
   gem 'brakeman'

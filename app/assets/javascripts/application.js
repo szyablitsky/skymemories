@@ -12,12 +12,11 @@
 //
 //= require modernizr-2.6.2.min
 //= require jquery
-//= require jquery.turbolinks
-//= require jquery.fitvids
 //= require jquery_ujs
-//= require fancybox
-//= require froogaloop
+//= require jquery.turbolinks
 //= require turbolinks
+//= require fitvids
+//= require froogaloop
 //= require bootstrap/transition
 //= require bootstrap/collapse
 //= require bootstrap/alert
@@ -27,5 +26,4 @@
 //= require bootstrap/dropdown
 //= require bootstrap/carousel
 //= require pace/pace
-//= require analytics
 //= require_tree .
