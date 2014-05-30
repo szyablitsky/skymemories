@@ -1,8 +1,3 @@
-pauseVideo = ($slideElement, oldIndex, newIndex) ->
-  iframe = $('#vimeo'+oldIndex)[0]
-  player = Froogaloop(iframe)
-  player.api('pause')
-
 $ ->
   $('#vimeo').fitVids()
 
