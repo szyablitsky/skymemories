@@ -13,10 +13,10 @@ html lang="#{I18n.locale}"
     link rel="apple-touch-icon" sizes="114x114" href="/touch-icon-iphone-retina.png"
     link rel="apple-touch-icon" sizes="144x144" href="/touch-icon-ipad-retina.png"
   body
-    = render "layouts/ga" if Rails.env.production?
+    = render 'layouts/ga' if Rails.env.production?
 
     header#page-header
-      = render "layouts/navbar"
+      = render 'layouts/navbar'
       #page-banner.container role="banner"
         = yield :banner
 
@@ -24,6 +24,6 @@ html lang="#{I18n.locale}"
       = yield
     - else
       = yield :map
-      = render "layouts/main"
+      = render 'layouts/main'
 
     = render 'layouts/footer'
