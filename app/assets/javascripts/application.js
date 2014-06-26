@@ -24,6 +24,6 @@
 //= require bootstrap/tooltip
 //= require bootstrap/popover
 //= require bootstrap/dropdown
-//= require bootstrap/carousel
+//= require bootstrap/modal
 //= require pace/pace
 //= require_tree .

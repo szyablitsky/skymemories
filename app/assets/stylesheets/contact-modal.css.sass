@@ -1,0 +1,33 @@
+@import 'constants'
+
+#contact-modal
+  background-color: rgba(255,255,255,.85)
+
+.modal-content
+  border-radius: 0
+  border: $header-color solid 3px
+  input, textarea
+    width: 100%
+    border: none
+    outline: 0
+    border: white solid 1px
+  input[type='text'], input[type='email']
+    margin-bottom: 17px
+  textarea
+    margin-bottom: 10px
+  input[type='text'], input[type='email'], textarea
+    color: $main-color
+    background-color: lighten($main-color,60%)
+    padding: 2px 7px
+    &:focus
+      border: $header-color solid 1px
+  input[type='submit']
+    height: 2em
+    color: white
+    background-color: $header-color
+  .phone-cell
+    padding-top: 6px
+  .phone
+    font-size: 1.2em
+    .hilight
+      color: $hilight-color

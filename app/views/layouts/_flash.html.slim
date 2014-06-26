@@ -1,0 +1,4 @@
+- flash.each do |name, msg|
+  div class="alert #{flash_decode name} fade in"
+    button.close type="button" data-dismiss="alert" aria-hidden="true" &times;
+    = msg 

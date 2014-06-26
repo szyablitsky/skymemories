@@ -6,6 +6,7 @@
 
  *= require typography
  *= require layout
+ *= require contact-modal
  *= require pagination
 
  *= require home
