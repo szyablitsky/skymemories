@@ -5,6 +5,7 @@ ruby '2.1.2'
 gem 'rails', '4.1.4'
 gem 'puma'
 gem 'pg'
+gem 'rails_12factor', group: :production
 
 gem "slim-rails"
 gem 'jbuilder', '~> 2.0'
