@@ -1,0 +1,5 @@
+$('#contact-modal').modal('hide');
+$('.top-right').notify({
+  type: '<%= @type %>',
+  message: { text: '<%= @message %>' }
+}).show();

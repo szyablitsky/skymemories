@@ -22,6 +22,7 @@ gem 'fitvidsjs_rails'
 
 gem 'bootstrap_form'
 gem 'gravatar_image_tag'
+gem 'bootstrap_notify', github: 'szyablitsky/bootstrap-notify-gem'
 
 gem 'rails-i18n'
 gem 'bcrypt'

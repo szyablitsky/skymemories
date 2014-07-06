@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/szyablitsky/bootstrap-notify-gem.git
+  revision: 196690cabd3337b9cb7418b462271f7db061c33a
+  specs:
+    bootstrap_notify (1.0.1)
+      bootstrap-sass
+      jquery-rails
+      rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -326,6 +335,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   bootstrap_form
+  bootstrap_notify!
   brakeman
   capistrano-bundler
   capistrano-puma

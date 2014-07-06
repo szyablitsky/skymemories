@@ -25,5 +25,6 @@
 //= require bootstrap/popover
 //= require bootstrap/dropdown
 //= require bootstrap/modal
+//= require bootstrap_notify
 //= require pace/pace
 //= require_tree .
