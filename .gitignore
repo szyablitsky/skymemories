@@ -20,5 +20,3 @@
 /.secret
 
 /*.log
-
-/config/application.yml

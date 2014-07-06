@@ -1,0 +1,8 @@
+smtp_settings:
+  address: smtp.yandex.ru
+  port: 587
+  domain: skymemories.ru
+  authentication: plain
+  user_name: info@skymemories.ru
+  password: <%= ENV['MAIL_PASSWORD'] %>
+  enable_starttls_auto: true
