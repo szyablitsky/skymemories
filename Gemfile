@@ -11,6 +11,7 @@ gem "slim-rails"
 gem 'jbuilder', '~> 2.0'
 
 gem 'sass-rails', '~> 4.0.3'
+gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
