@@ -2,16 +2,16 @@ require 'spec_helper'
 
 describe User do
   
-  it { should have_many :posts }
+  it { is_expected.to have_many :posts }
 
-  it { should respond_to(:authenticate) }
-  it { should ensure_length_of(:password).is_at_least(6) }
+  it { is_expected.to respond_to(:authenticate) }
+  it { is_expected.to ensure_length_of(:password).is_at_least(6) }
 
-  it { should validate_presence_of :name }
-  it { should ensure_length_of(:name).is_at_most(50) }
+  it { is_expected.to validate_presence_of :name }
+  it { is_expected.to ensure_length_of(:name).is_at_most(50) }
   
-  it { should validate_presence_of :email }
-#  it { should validate_uniqueness_of(:email).case_insensitive }
+  it { is_expected.to validate_presence_of :email }
+#  it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
 
   let(:user) { FactoryGirl.create(:user) }
 
@@ -26,7 +26,7 @@ describe User do
   end
 
   it "has a valid factory" do
-    user.should be_valid
+    expect(user).to be_valid
   end
 
 end

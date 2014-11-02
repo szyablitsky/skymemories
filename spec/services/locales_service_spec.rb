@@ -1,20 +1,22 @@
 require 'spec_helper'
 
 describe LocalesService do
+  describe '.get_locale_from' do
+    subject { LocalesService.get_locale_from(params) }
 
-  describe "get_locale_from" do
-    it "shoud return default locale if params[:locale] is empty" do
-      params = {}
-      LocalesService.get_locale_from(params).should eq 'ru'
+    context 'shoud return default locale if params[:locale] is empty' do
+      let(:params) { { } }
+      it { is_expected.to eq 'ru' }
     end
-    it "shoud return default locale if params[:locale] has invalid value" do
-      params = { locale: '' }
-      LocalesService.get_locale_from(params).should eq 'ru'
+
+    context 'shoud return default locale if params[:locale] has invalid value' do
+      let(:params) { { locale: '' } }
+      it { is_expected.to eq 'ru' }
     end
-    it "shoud return back params[:locale] value if params[:locale] has valid value" do
-      params = { locale: 'he' }
-      LocalesService.get_locale_from(params).should eq 'he'
+
+    context 'shoud return back params[:locale] value if params[:locale] has valid value' do
+      let(:params) { { locale: 'he' } }
+      it { is_expected.to eq 'he' }
     end
   end
-
 end

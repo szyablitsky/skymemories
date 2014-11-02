@@ -61,13 +61,13 @@ RSpec.describe PostsController, type: :controller do
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved post as @post" do
-        Post.any_instance.stub(:save).and_return(false)
+        allow_any_instance_of(Post).to receive(:save).and_return(false)
         post :create, {:post => { "title" => "invalid value" }}, valid_session
         expect(assigns(:post)).to be_a_new(Post)
       end
 
       it "re-renders the 'new' template" do
-        Post.any_instance.stub(:save).and_return(false)
+        allow_any_instance_of(Post).to receive(:save).and_return(false)
         post :create, {:post => { "title" => "invalid value" }}, valid_session
         expect(response).to render_template("new")
       end
@@ -96,13 +96,13 @@ RSpec.describe PostsController, type: :controller do
 
     describe "with invalid params" do
       it "assigns the post as @post" do
-        Post.any_instance.stub(:save).and_return(false)
+        allow_any_instance_of(Post).to receive(:save).and_return(false)
         put :update, {:id => the_post.to_param, :post => { "title" => "invalid value" }}, valid_session
         expect(assigns(:post)).to eq(the_post)
       end
 
       it "re-renders the 'edit' template" do
-        Post.any_instance.stub(:save).and_return(false)
+        allow_any_instance_of(Post).to receive(:save).and_return(false)
         put :update, {:id => the_post.to_param, :post => { "title" => "invalid value" }}, valid_session
         expect(response).to render_template("edit")
       end

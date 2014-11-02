@@ -55,13 +55,13 @@ RSpec.describe MoviesController, type: :controller do
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved movie as @movie" do
-        Movie.any_instance.stub(:save).and_return(false)
+        allow_any_instance_of(Movie).to receive(:save).and_return(false)
         post :create, {:movie => { "vimeo_id" => "invalid value" }}, valid_session
         expect(assigns(:movie)).to be_a_new(Movie)
       end
 
       it "re-renders the 'new' template" do
-        Movie.any_instance.stub(:save).and_return(false)
+        allow_any_instance_of(Movie).to receive(:save).and_return(false)
         post :create, {:movie => { "vimeo_id" => "invalid value" }}, valid_session
         expect(response).to render_template("new")
       end
@@ -91,13 +91,13 @@ RSpec.describe MoviesController, type: :controller do
 
     describe "with invalid params" do
       it "assigns the movie as @movie" do
-        Movie.any_instance.stub(:save).and_return(false)
+        allow_any_instance_of(Movie).to receive(:save).and_return(false)
         put :update, {:id => movie.to_param, :movie => { "vimeo_id" => "invalid value" }}, valid_session
         expect(assigns(:movie)).to eq(movie)
       end
 
       it "re-renders the 'edit' template" do
-        Movie.any_instance.stub(:save).and_return(false)
+        allow_any_instance_of(Movie).to receive(:save).and_return(false)
         put :update, {:id => movie.to_param, :movie => { "vimeo_id" => "invalid value" }}, valid_session
         expect(response).to render_template("edit")
       end
@@ -112,9 +112,9 @@ RSpec.describe MoviesController, type: :controller do
       }.to change(Movie, :count).by(-1)
     end
 
-    it "redirects to the movies list" do
+    it 'redirects to the movies list' do
       delete :destroy, {:id => movie.to_param}, valid_session
-      response.should redirect_to(movies_url)
+      expect(response).to redirect_to(movies_url)
     end
   end
 

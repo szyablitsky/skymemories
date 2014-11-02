@@ -6,9 +6,13 @@ RSpec.describe MessagesController, type: :controller do
   let(:valid_session) { {} }
 
   describe 'POST create' do
-    it 'sould redirect to contact page' do
-      post :create, {message: valid_attributes}, valid_session
-      expect(response).to redirect_to(contact_path)
+    let (:post_create) do
+      post :create, { message: valid_attributes, format: :js }, valid_session
+    end
+
+    it 'sould respond with success' do
+      post_create
+      expect(response).to be_success
     end
   end
 

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.7'
 gem 'puma'
 gem 'pg'
 gem 'rails_12factor', group: :production
@@ -55,9 +55,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  gem 'minitest'
   gem 'shoulda-matchers'
   gem 'coveralls', require: false
 end
