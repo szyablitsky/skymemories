@@ -32,9 +32,9 @@ module Skymemories
 
     # smtp_settings = YAML.load_file('config/application.yml')['smtp_settings'].to_options
 
-    if !Rails.env.test?
-      config.action_mailer.smtp_settings =
-        YAML.load_file('config/application.yml')['smtp_settings'].to_options
+    unless Rails.env.test?
+      yaml = ERB.new(File.read("#{Rails.root}/config/application.yml")).result
+      config.action_mailer.smtp_settings = YAML.load(yaml)['smtp_settings'].to_options
     end
   end
 end
