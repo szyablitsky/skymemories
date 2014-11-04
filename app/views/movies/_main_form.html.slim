@@ -1,0 +1,4 @@
+= form_for movie, html: { class: 'main-form' } do |f|
+  = f.hidden_field :id
+  = f.hidden_field :main, value: true
+  = f.submit 'Cделать основным', class: 'btn btn-default btn-xs'

@@ -23,36 +23,37 @@
 }
 
 .movies {
-  padding: 10px;
+  padding: 20px 20px 0 20px;
   list-style-type: none;
   margin: 0;
 }
 
 .movie {
+  min-height: 75px;
   margin-bottom: 20px;
-  p {
+  h1 {
+    font-size: 1em;
+    line-height: 1;
+    font-weight: 500;
+  }
+  h1, p {
     margin-top: 0;
     margin-bottom: 10px;
   }
   img {
     float: left;
-    padding-right: 10px;
+    margin: 0 10px 10px 0;
+  }
+  .controls {
+    float: right;
   }
   .edit_movie, .main-form {
     display: inline-block;
   }
   &.movie-main {
-    float: left;
-    padding-right: 10px;
-    margin-right: 10px;
-    border-right: 1px solid lightgray;
-    img {
-      padding: 0;
-      float: none;
-    }
-    .edit_movie {
-      display: block;
-    }
+    margin-left: -11px;
+    border-left: 2px solid lightgray;
+    padding-left: 9px;
   }
 }
 

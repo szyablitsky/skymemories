@@ -3,6 +3,7 @@
     = bootstrap_form_for movie do |f|
       = f.number_field :vimeo_id, append: content_tag(:button, 'Заполнить', id: 'lookup', class: 'btn btn-default', data: { loading_text: 'Обработка...' })
       = f.text_field :title
+      = f.text_area :description, rows: 10
       = f.select :locale, LOCALE_NAMES.map { |x| [x[1], x[0]] }
       .form-group
         label Изображение

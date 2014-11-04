@@ -1,9 +1,0 @@
-<% provide :title, "Редактирование фильма" %>
-
-<% content_for :banner do %>
-  <p class="lead"><i>Наши фильмы</i></p>
-<% end %>
-
-<h1><%= yield :title %></h1>
-
-<%= render "form", movie: @movie %>

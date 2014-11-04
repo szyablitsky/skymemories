@@ -1,0 +1,8 @@
+li class="#{movie_class_for movie}"
+  = thumbnail_for movie
+  .controls
+    => link_to 'Изменить', edit_movie_path(movie), class: 'btn btn-default btn-xs'
+    => main_form_for movie
+    = link_to 'Удалить', movie, method: :delete, data: { confirm: 'Удалить фильм?' }, class: 'btn btn-default btn-xs'
+  h1= movie.title
+  p= movie.description
