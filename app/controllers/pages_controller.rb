@@ -1,10 +1,12 @@
 class PagesController < ApplicationController
 
+  DEFAULT_MOVIE_ATTRS = { vimeo_id: 76028042, title: 'Misha+Dasha(the highlights)',
+    thumbnail: 'http://b.vimeocdn.com/ts/450/734/450734986_100.jpg' }
+
   def home
-    @movies = Movie.by_locale(I18n.locale.to_s)
-    default_movie_attrs = { vimeo_id: 76028042, title: 'Misha+Dasha(the highlights)',
-      thumbnail: 'http://b.vimeocdn.com/ts/450/734/450734986_100.jpg' }
-    @movies = [Movie.new(default_movie_attrs)] if @movies.empty?
+    @main_movie = Movie.main
+    @main_movie = Movie.new(DEFAULT_MOVIE_ATTRS) unless @main_movie
+    @movies = (0..2).map { |i| Movie.column(i) }
   end
 
   def about
