@@ -33,6 +33,7 @@ gem 'will_paginate'
 gem 'newrelic_rpm'
 
 group :development do
+  gem 'i18n-debug'
   gem 'brakeman'
   gem 'quiet_assets'
   gem 'better_errors'

@@ -1,0 +1,10 @@
+- provide :title, 'Фильмы'
+h1 Фильмы
+- sort_and_add_locales(@locales).each do |locale, movies|
+  section.locale
+    header
+      => locale_name(locale)
+      = link_to 'Добавить фильм', new_movie_path(locale: locale)
+    - if movies
+      ul.movies.clearfix
+        = render movies

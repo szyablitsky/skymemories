@@ -1,4 +1,13 @@
 ru:
+  activerecord:
+    models:
+      movie: фильм
+    attributes:
+      movie:
+        vimeo_id: 'ID фильма на Vimeo'
+        title: Заголовок
+        description: Описание
+        locale: Язык
   will_paginate:
     previous_label: "&laquo;"
     next_label: "&raquo;"
