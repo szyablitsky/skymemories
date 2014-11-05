@@ -16,7 +16,7 @@
 //= require jquery.turbolinks
 //= require turbolinks
 //= require fitvids
-//= require froogaloop
+//= require jquery.dragsort-0.5.2
 //= require bootstrap/transition
 //= require bootstrap/collapse
 //= require bootstrap/alert
