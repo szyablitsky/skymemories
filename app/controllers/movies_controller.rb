@@ -1,5 +1,4 @@
 class MoviesController < ApplicationController
-
   before_action :signed_in_user
   before_action :set_movie, only: [:edit, :update, :destroy]
 
@@ -13,7 +12,6 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.new(movie_params)
-
     if Movies::CreatorService.new(@movie).create #@movie.save
       redirect_to movies_path, flash: {success: 'Фильм успешно добавлен'}
     else
@@ -39,12 +37,11 @@ class MoviesController < ApplicationController
 
   private
 
-    def set_movie
-      @movie = Movie.find(params[:id])
-    end
+  def set_movie
+    @movie = Movie.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def movie_params
-      params.require(:movie).permit(:vimeo_id, :locale, :main, :title, :description, :thumbnail)
-    end
+  def movie_params
+    params.require(:movie).permit(:vimeo_id, :locale, :main, :title, :description, :thumbnail)
+  end
 end
