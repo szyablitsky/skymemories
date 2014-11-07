@@ -1,7 +1,7 @@
 module Movies
   class CreatorService
-    def initialize(params)
-      @movie = Movie.new(params)
+    def initialize(movie)
+      @movie = movie
     end
 
     def create

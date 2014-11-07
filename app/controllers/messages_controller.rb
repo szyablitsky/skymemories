@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  respond_to :js  
+  respond_to :js
 
   def create
     if /<a( )+href/ =~ message_params[:message]
@@ -14,8 +14,7 @@ class MessagesController < ApplicationController
 
   private
 
-    def message_params
-      params.require(:message).permit(:name, :email, :message)
-    end
-
+  def message_params
+    params.require(:message).permit(:name, :email, :message)
+  end
 end

@@ -11,9 +11,9 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new()
-    if Movies::CreatorService.new(movie_params).create
-      redirect_to movies_path, flash: {success: 'Фильм успешно добавлен'}
+    @movie = Movie.new(movie_params)
+    if Movies::CreatorService.new(@movie).create
+      redirect_to movies_path, flash: { success: 'Фильм успешно добавлен' }
     else
       render 'new'
     end
@@ -24,7 +24,7 @@ class MoviesController < ApplicationController
 
   def update
     if @movie.update(movie_params)
-      redirect_to movies_path, flash: {success: 'Изменения успешно сохранены.'}
+      redirect_to movies_path, flash: { success: 'Изменения успешно сохранены.' }
     else
       render 'edit'
     end

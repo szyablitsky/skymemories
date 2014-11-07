@@ -1,5 +1,4 @@
 class Post < ActiveRecord::Base
-
   self.per_page = 5
 
   default_scope -> { order('created_at DESC') }
@@ -8,8 +7,6 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
 
   validates :title, presence: true
-  validates :title, uniqueness: true
 
   validates :content, presence: true
-
 end

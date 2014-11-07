@@ -1,8 +1,6 @@
 module ApplicationHelper
-
-  # Returns the full title on a per-page basis.
   def title(page_title)
-    base_title = "Sky Memories"
+    base_title = 'Sky Memories'
     if page_title.empty?
       base_title
     else
@@ -15,26 +13,25 @@ module ApplicationHelper
   end
 
   def locale_menu
-    raw LOCALE_NAMES.map { |locale, locale_name|
+    raw LOCALE_NAMES.map do |locale, locale_name|
       content_tag :li, class: locale_class(locale) do
-        link_to locale_name, locale: (locale == 'ru' ? nil : locale )
-      end 
-    }.join
+        link_to locale_name, locale: (locale == 'ru' ? nil : locale)
+      end
+    end.join
   end
 
-  def flash_decode name
+  def flash_decode(name)
     'alert-' +
-    case name
+      case name
       when 'error' then 'danger'
       when 'notice' then 'info'
       else name.to_s
-    end
+      end
   end
 
   private
 
-    def locale_class locale
-      "active" if I18n.locale == locale.to_sym
-    end
-
+  def locale_class(locale)
+    'active' if I18n.locale == locale.to_sym
+  end
 end

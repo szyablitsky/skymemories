@@ -5,7 +5,7 @@ set :application, 'skymemories'
 set :repo_url, 'git@github.com:szyablitsky/skymemories.git'
 set :branch, 'master'
 
-set :default_env, { path: "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH" }
+set :default_env, { path: '$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH' }
 
 set :keep_releases, 5
 

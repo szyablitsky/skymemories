@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-
   self.per_page = 10
 
   before_save { email.downcase! }
@@ -27,8 +26,7 @@ class User < ActiveRecord::Base
 
   private
 
-    def create_remember_token
-      self.remember_token = User.encrypt(User.new_remember_token)
-    end
-
+  def create_remember_token
+    self.remember_token = User.encrypt(User.new_remember_token)
+  end
 end

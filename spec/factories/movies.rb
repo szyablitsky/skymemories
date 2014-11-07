@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :movie do
-    sequence (:vimeo_id) { |i| 222111000 + i }
+    sequence (:vimeo_id) { |i| 222_111_000 + i }
     locale 'ru'
     sequence (:main) { |i| i == 1 }
     sequence (:title) { |i| "Title#{i}" }

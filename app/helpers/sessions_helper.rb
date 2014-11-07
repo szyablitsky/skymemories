@@ -1,5 +1,4 @@
 module SessionsHelper
-
   def sign_in(user)
     remember_token = User.new_remember_token
     cookies.permanent[:remember_token] = remember_token
@@ -26,7 +25,7 @@ module SessionsHelper
 
   def signed_in_user
     store_location
-    redirect_to login_url, notice: "Необходима авторизация" unless signed_in?
+    redirect_to login_url, notice: 'Необходима авторизация' unless signed_in?
   end
 
   def sign_out
@@ -42,5 +41,4 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.url
   end
-
 end
