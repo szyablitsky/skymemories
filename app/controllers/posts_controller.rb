@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   before_action :signed_in_user
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -20,50 +19,33 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @post }
-      else
-        format.html { render action: 'new' }
-        format.json { json_render_errors }
-      end
+    if @post.save
+      redirect_to @post, notice: 'Post was successfully created.'
+    else
+      render 'new'
     end
   end
 
   def update
-    respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { json_render_errors }
-      end
+    if @post.update(post_params)
+      redirect_to @post, notice: 'Post was successfully updated.'
+    else
+      render 'edit'
     end
   end
 
   def destroy
     @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url }
-      format.json { head :no_content }
-    end
+    redirect_to posts_url
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def post_params
-      params.require(:post).permit(:title, :content, :published, :user_id)
-    end
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
-    def json_render_errors
-      render json: @post.errors, status: :unprocessable_entity
-    end
-
+  def post_params
+    params.require(:post).permit(:title, :content, :published, :user_id)
+  end
 end

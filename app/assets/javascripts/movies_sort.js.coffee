@@ -2,7 +2,7 @@ dragEnd = ->
   movies = $(@).parent().children()
   array = $.map movies, (movie) ->
     $(movie).data('id')
-  console.log array
+  $.post 'movies/order', { order: array }
 
 $ ->
   $('ul.movies').dragsort

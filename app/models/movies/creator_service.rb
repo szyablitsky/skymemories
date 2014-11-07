@@ -1,18 +1,20 @@
 module Movies
   class CreatorService
-    def initialize(movie)
-      @movie = movie
+    def initialize(params)
+      @movie = Movie.new(params)
     end
 
     def create
-      @movie.main = no_movies_with_same_locale
-      @movie.save
+      @movie.index = -1
+      @movie.save && reorder
     end
 
     private
 
-    def no_movies_with_same_locale
-      Movie.where(locale: @movie.locale).count == 0
+    def reorder
+      Movie.by_locale(@movie.locale).each_with_index do |movie, index|
+        movie.update_column(:index, index)
+      end
     end
   end
 end

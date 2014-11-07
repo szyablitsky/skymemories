@@ -47,14 +47,6 @@
   .controls {
     float: right;
   }
-  .edit_movie, .main-form {
-    display: inline-block;
-  }
-  &.movie-main {
-    margin-left: -11px;
-    border-left: 2px solid lightgray;
-    padding-left: 9px;
-  }
 }
 
 #videos {

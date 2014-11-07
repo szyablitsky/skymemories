@@ -11,11 +11,11 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(movie_params)
-    if Movies::CreatorService.new(@movie).create #@movie.save
+    @movie = Movie.new()
+    if Movies::CreatorService.new(movie_params).create
       redirect_to movies_path, flash: {success: 'Фильм успешно добавлен'}
     else
-      render action: 'new'
+      render 'new'
     end
   end
 
@@ -23,16 +23,21 @@ class MoviesController < ApplicationController
   end
 
   def update
-    if Movies::UpdateService.new(@movie).update(movie_params)
+    if @movie.update(movie_params)
       redirect_to movies_path, flash: {success: 'Изменения успешно сохранены.'}
     else
-      render action: 'edit'
+      render 'edit'
     end
   end
 
   def destroy
-    Movies::DestroyerService.new(@movie).destroy #@movie.destroy
+    @movie.destroy
     redirect_to movies_url
+  end
+
+  def order
+    Movies::OrderService.new(params[:order]).perform
+    head :no_content
   end
 
   private

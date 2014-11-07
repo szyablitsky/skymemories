@@ -1,7 +1,7 @@
 <% provide :title, "Редактирование статьи" %>
 <h1>Редактирование статьи</h1>
 
-<%= render 'form' %>
+<%= render 'form', post: @post %>
 
 <%= link_to 'Просмотреть', @post %> |
 <%= link_to 'Назад', posts_path %>

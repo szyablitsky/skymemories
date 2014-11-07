@@ -1,6 +1,6 @@
 <% provide :title, 'Новая статья' %>
 <h1>Новая статья</h1>
 
-<%= render 'form' %>
+<%= render 'form', post: @post %>
 
 <%= link_to 'Назад', posts_path %>
