@@ -1,5 +1,8 @@
 dragEnd = ->
-  console.log $(@).parent().children()
+  movies = $(@).parent().children()
+  array = $.map movies, (movie) ->
+    $(movie).data('id')
+  console.log array
 
 $ ->
   $('ul.movies').dragsort

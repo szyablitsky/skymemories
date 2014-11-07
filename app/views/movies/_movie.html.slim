@@ -1,4 +1,4 @@
-li class="#{movie_class_for movie}"
+li class="#{movie_class_for movie}" data-id="#{movie.id}"
   = thumbnail_for movie
   .controls
     => link_to 'Изменить', edit_movie_path(movie), class: 'btn btn-default btn-xs'
