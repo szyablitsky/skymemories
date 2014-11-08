@@ -1,75 +1,64 @@
 require 'spec_helper'
 
 RSpec.describe MoviesController, type: :controller do
-  let(:movie) { FactoryGirl.create :movie }
-  let(:valid_attributes) { FactoryGirl.attributes_for :movie }
-  let(:valid_session) do
-    { remember_token: FactoryGirl.attributes_for(:user)[:remember_token] }
-  end
-  let(:user) { FactoryGirl.create :user }
+  let(:movie) { FactoryGirl.create(:movie) }
+  let(:valid_attributes) { FactoryGirl.attributes_for(:movie) }
 
-  before do
-    cookies[:remember_token] = user.remember_token
-    user.update_attribute(:remember_token, User.encrypt(user.remember_token))
-  end
+  before { login_user }
 
   describe 'GET index' do
     it 'assigns all movies as grouped @locales array' do
-      get :index, {}, valid_session
+      get :index, {}
       expect(assigns(:locales)).to eq({})
     end
   end
 
   describe 'GET new' do
     it 'assigns a new movie as @movie' do
-      get :new, {}, valid_session
+      get :new, {}
       expect(assigns(:movie)).to be_a_new(Movie)
     end
   end
 
   describe 'GET edit' do
     it 'assigns the requested movie as @movie' do
-      get :edit, { id: movie.to_param }, valid_session
+      get :edit, { id: movie.to_param }
       expect(assigns(:movie)).to eq(movie)
     end
   end
 
   describe 'POST create' do
     describe 'with valid params' do
-      let(:create) do
-        post :create, { movie: valid_attributes }, valid_session
-      end
+      let(:create_movie) { post :create, { movie: valid_attributes } }
 
       it 'creates a new Movie' do
-        expect { create }.to change(Movie, :count).by(1)
+        expect { create_movie }.to change(Movie, :count).by(1)
       end
 
       it 'assigns a newly created movie as @movie' do
-        create
+        create_movie
         expect(assigns(:movie)).to be_a(Movie)
         expect(assigns(:movie)).to be_persisted
       end
 
       it 'redirects to movies list' do
-        create
+        create_movie
         expect(response).to redirect_to(movies_path)
       end
     end
 
     describe 'with invalid params' do
-      let(:create) do
-        post :create, { movie: { 'vimeo_id' => 'invalid value' } }, valid_session
+      let(:create_movie) do
+        post :create, { movie: { 'vimeo_id' => 'invalid value' } }
       end
 
+      before { create_movie }
+
       it 'assigns a newly created but unsaved movie as @movie' do
-        allow_any_instance_of(Movie).to receive(:save).and_return(false)
-        create
         expect(assigns(:movie)).to be_a_new(Movie)
       end
 
       it 're-renders the "new" template' do
-        allow_any_instance_of(Movie).to receive(:save).and_return(false)
-        create
         expect(response).to render_template('new')
       end
     end
@@ -79,47 +68,49 @@ RSpec.describe MoviesController, type: :controller do
     describe 'with valid params' do
       it 'updates the requested movie' do
         expect do
-          put :update, { id: movie.to_param, movie: { 'vimeo_id' => '1' } }, valid_session
+          put :update, { id: movie.to_param, movie: { 'vimeo_id' => '1' } }
           movie.reload
         end.to change { movie.vimeo_id }
       end
 
       it 'assigns the requested movie as @movie' do
-        put :update, { id: movie.to_param, movie: valid_attributes}, valid_session
+        put :update, { id: movie.to_param, movie: valid_attributes }
         expect(assigns(:movie)).to eq(movie)
       end
 
       it 'redirects to the movies list' do
-        put :update, { id: movie.to_param, movie: valid_attributes}, valid_session
+        put :update, { id: movie.to_param, movie: valid_attributes }
         expect(response).to redirect_to(movies_path)
       end
     end
 
     describe 'with invalid params' do
+      let(:update_movie) do
+        put :update, { id: movie.to_param, movie: { 'vimeo_id' => 'invalid value' } }
+      end
+
       it 'assigns the movie as @movie' do
-        allow_any_instance_of(Movie).to receive(:save).and_return(false)
-        put :update, { id: movie.to_param, movie: { 'vimeo_id' => 'invalid value' } }, valid_session
+        update_movie
         expect(assigns(:movie)).to eq(movie)
       end
 
       it 're-renders the "edit" template' do
-        allow_any_instance_of(Movie).to receive(:save).and_return(false)
-        put :update, { id: movie.to_param, movie: { 'vimeo_id' => 'invalid value' } }, valid_session
+        update_movie
         expect(response).to render_template('edit')
       end
     end
   end
 
   describe 'DELETE destroy' do
+    let(:destroy_movie) { delete :destroy, { id: movie.to_param } }
+
     it 'destroys the requested movie' do
       movie.save
-      expect {
-        delete :destroy, { id: movie.to_param }, valid_session
-      }.to change(Movie, :count).by(-1)
+      expect { destroy_movie }.to change(Movie, :count).by(-1)
     end
 
     it 'redirects to the movies list' do
-      delete :destroy, { id: movie.to_param }, valid_session
+      destroy_movie
       expect(response).to redirect_to(movies_url)
     end
   end

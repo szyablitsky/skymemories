@@ -11,10 +11,7 @@ describe Movie do
 
   let(:movie) { FactoryGirl.create(:movie) }
 
-  it "has a valid factory" do
+  it 'has a valid factory' do
     expect(movie).to be_valid
   end
-
-  
-
 end
