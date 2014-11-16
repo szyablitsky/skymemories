@@ -31,6 +31,7 @@ gem 'bcrypt'
 gem 'vimeo'
 gem 'will_paginate'
 gem 'newrelic_rpm'
+gem 'skylight'
 
 group :development do
   gem 'i18n-debug'
