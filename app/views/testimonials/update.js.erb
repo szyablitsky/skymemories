@@ -1,0 +1,8 @@
+<% if testimonial.errors.present? %>
+  <% id = "#testimonial-#{testimonial.id}" %>
+  $('<%= id %>').children('.edit-form')
+    .html('<%= j render "update_form", testimonial: testimonial %>');
+<% else %>
+  $('#movies-with-testimonials').html('<%= j render "movies", movies: movies %>');
+  $('#create-testimonial-form').show()
+<% end %>

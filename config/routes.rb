@@ -11,6 +11,7 @@ Skymemories::Application.routes.draw do
   resources :movies, except: [:show] do
     post 'order', on: :collection
   end
+  resources :testimonials, only: [:index, :create, :update, :destroy]
   resources :posts
   resources :users
 

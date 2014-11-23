@@ -2,12 +2,17 @@ ru:
   activerecord:
     models:
       movie: фильм
+      testimonial: отзыв
     attributes:
       movie:
         vimeo_id: 'ID фильма на Vimeo'
         title: Заголовок
         description: Описание
         locale: Язык
+      testimonial:
+        movie_id: Фильм
+        body: Текст
+        author: Кто оставил
   will_paginate:
     previous_label: "&laquo;"
     next_label: "&raquo;"

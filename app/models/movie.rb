@@ -1,4 +1,6 @@
 class Movie < ActiveRecord::Base
+  has_many :testimolials
+
   validates :vimeo_id, presence: true
   validates :vimeo_id, numericality: true
   validates :vimeo_id, uniqueness: true
@@ -19,9 +21,7 @@ class Movie < ActiveRecord::Base
   end
 
   scope :main, -> { where(index: 0).by_current_locale.first }
-
   scope :by_current_locale, -> { by_locale(I18n.locale.to_s) }
-
   scope :by_locale, -> (locale) { where(locale: locale).order(:index) }
 
   def thumbnail_id

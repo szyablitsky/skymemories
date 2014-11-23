@@ -1,0 +1,7 @@
+= bootstrap_form_for testimonial, layout: :horizontal, label_col: 'col-sm-2',
+                     control_col: 'col-sm-10', remote: true do |f|
+  = f.collection_select :movie_id, Movie.order(:title), :id, :title
+  = f.text_area :body, rows: 5
+  = f.text_field :author
+  = f.form_group do
+    = f.submit data: { disable_with: 'Обработка...' }, class: 'btn btn-primary'

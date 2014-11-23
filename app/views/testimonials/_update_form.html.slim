@@ -1,0 +1,7 @@
+= bootstrap_form_for testimonial, layout: :horizontal, remote: true do |f|
+  = f.text_area :body, rows: 5
+  = f.text_field :author
+  = f.form_group do
+    => f.submit data: { disable_with: 'Обработка...' }, class: 'btn btn-primary'
+    = link_to 'Отмена', '#', data: { id: testimonial.id },
+              class: 'btn btn-default cancel'

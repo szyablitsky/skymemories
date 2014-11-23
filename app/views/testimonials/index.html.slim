@@ -1,0 +1,7 @@
+- provide :title, 'Отзывы'
+h1 Отзывы
+ul#movies-with-testimonials
+  = render 'movies', movies: movies
+h2 Добавить отзыв
+#create-testimonial-form
+  = render 'create_form', testimonial: Testimonial.new
