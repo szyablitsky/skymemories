@@ -5,17 +5,11 @@
       - testimonials.each do |testimonial|
         li.testimonial id="testimonial-#{testimonial.id}"
           .info
-            p = testimonial.body
+            p =  TestimonialDecorator.new(testimonial).formatted_body
             .controls
               => link_to 'Изменить', '#', data: { id: testimonial.id }, class: 'edit'
               = link_to 'Удалить', testimonial, method: :delete, remote: :true,
                         data: { confirm: 'Вы уверены что хотите удалить отзыв?' }
             p = testimonial.author
           .edit-form
-            = bootstrap_form_for testimonial, layout: :horizontal, remote: true do |f|
-              = f.text_area :body, rows: 5
-              = f.text_field :author
-              = f.form_group do
-                => f.submit data: { disable_with: 'Обработка...' }, class: 'btn btn-primary'
-                = link_to 'Отмена', '#', data: { id: testimonial.id },
-                          class: 'btn btn-default cancel'
+            = render 'update_form', testimonial: testimonial
