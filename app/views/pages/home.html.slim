@@ -20,7 +20,7 @@ main.container
       ul
         - @main_movie.testimonials.each do |testimonial|
           li
-            p.author= testimonial.author
+            h1= testimonial.author
             p= testimonial.body
 
   hr
@@ -37,6 +37,6 @@ main.container
               ul
                 - movie.testimonials.each do |testimonial|
                   li
-                    p.author= testimonial.author
+                    h1= testimonial.author
                     p= testimonial.body
 

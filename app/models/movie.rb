@@ -21,7 +21,7 @@ class Movie < ActiveRecord::Base
   end
 
   scope :main, -> { where(index: 0).by_current_locale.first }
-  scope :by_current_locale, -> { by_locale(I18n.locale.to_s) }
+  scope :by_current_locale, -> { by_locale(I18n.locale.to_s).includes(:testimonials) }
   scope :by_locale, -> (locale) { where(locale: locale).order(:index) }
 
   def thumbnail_id
