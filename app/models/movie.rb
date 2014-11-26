@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-  has_many :testimolials
+  has_many :testimonials
 
   validates :vimeo_id, presence: true
   validates :vimeo_id, numericality: true

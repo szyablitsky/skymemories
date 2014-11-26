@@ -13,6 +13,16 @@ main.container
     h1= @main_movie.title
     p= @main_movie.description
 
+  .row#testimonials class="#{'hidden' unless @main_movie.testimonials.any?}"
+    .col-sm-2.text-center
+      .quote: span &#8220;
+    .col-sm-10
+      ul
+        - @main_movie.testimonials.each do |testimonial|
+          li
+            p.author= testimonial.author
+            p= testimonial.body
+
   hr
 
   #movie-list.row
@@ -23,3 +33,10 @@ main.container
             img src="http://i.vimeocdn.com/video/#{movie.thumbnail_id}_360x203.jpg"
             h1= movie.title
             p= movie.description
+            .testimonials.hidden
+              ul
+                - movie.testimonials.each do |testimonial|
+                  li
+                    p.author= testimonial.author
+                    p= testimonial.body
+

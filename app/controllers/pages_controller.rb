@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   DEFAULT_MOVIE_ATTRS = {
     vimeo_id: 76_028_042,
     title: 'Misha+Dasha(the highlights)',
-    thumbnail: 'http://b.vimeocdn.com/ts/450/734/450734986_100.jpg'
+    thumbnail: 'http://b.vimeocdn.com/ts/450/734/450734986_100.jpg',
+    testimonials: []
   }
 
   def home
