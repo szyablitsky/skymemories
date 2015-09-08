@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
       @message = t('flash.message.error')
       @type = 'danger'
     else
-      MessageNotifier.msg(message_params).deliver
+      MessageNotifier.msg(message_params).deliver_now
       @message = t('flash.message.success')
       @type = 'success'
     end

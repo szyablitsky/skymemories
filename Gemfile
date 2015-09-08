@@ -2,12 +2,14 @@ source 'https://rubygems.org'
 
 ruby '2.2.3'
 
-gem 'rails', '4.1.7'
+gem 'rails', '4.2.4'
 gem 'puma'
 gem 'pg'
 gem 'rails_12factor', group: :production
 
-gem "slim-rails"
+gem 'responders', '~> 2.0'
+
+gem 'slim-rails'
 gem 'jbuilder', '~> 2.0'
 
 gem 'sass-rails', '~> 4.0.3'
@@ -31,7 +33,6 @@ gem 'bcrypt'
 gem 'vimeo'
 gem 'will_paginate'
 gem 'newrelic_rpm'
-gem 'skylight'
 
 group :development do
   gem 'i18n-debug'
@@ -40,10 +41,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
-  gem 'capistrano-puma', require: false
-  gem 'capistrano-rails'
 end
 
 group :development, :test do
