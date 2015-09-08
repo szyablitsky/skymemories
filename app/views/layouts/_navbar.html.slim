@@ -8,11 +8,13 @@
         li = link_to t('.about'), about_path
         - if I18n.locale == :ru
           li = link_to t('.blog'), blog_index_path
+        li = link_to t('.vacancies'), vacancies_path
         li
           = link_to t('.contact'), '#contact-modal', class: 'contact',
                     data: { toggle: :modal }
-    .col.md-3
-      ul.pull-right
-        = locale_menu if false && localized_page?
-        = render 'layouts/tools' if signed_in?
+    - if signed_in?
+      .col.md-3
+        ul.pull-right
+          = locale_menu if false && localized_page?
+          = render 'layouts/tools' if signed_in?
   hr

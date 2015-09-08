@@ -1,11 +1,11 @@
 Skymemories::Application.routes.draw do
-  scope '(:locale)', locale: /ru|en|he/ do  
+  scope '(:locale)', locale: /ru|en|he/ do
     root 'pages#home'
     get 'about', to: 'pages#about'
-    get 'contact', to: 'pages#contact'
+    get 'vacancies', to: 'pages#vacancies'
     resources :messages, only: [:create]
   end
-  
+
   resources :blog, only: [:index, :show]
 
   resources :movies, except: [:show] do

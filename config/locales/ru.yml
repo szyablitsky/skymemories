@@ -23,6 +23,7 @@ ru:
     navbar:
       blog: Информация
       about: О студии
+      vacancies: Вакансии
       contact: Напишите нам
   blog:
     index:
@@ -34,8 +35,8 @@ ru:
       address2: "Хабаровск, Россия"
     about:
       title: О студии
-    contact:
-      title: Контакты
+    vacancies:
+      title: Вакансии
     contact_form:
       form_name: Ваше имя
       form_email: Адрес электронной почты

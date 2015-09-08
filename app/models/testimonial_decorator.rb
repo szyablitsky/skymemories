@@ -1,6 +1,6 @@
 class TestimonialDecorator < SimpleDelegator
   def formatted_body
-    sanitize(body).gsub("\n",'<br />').html_safe
+    sanitize(body).gsub("\n", '<br />').html_safe
   end
 
   private

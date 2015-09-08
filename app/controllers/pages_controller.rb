@@ -15,6 +15,6 @@ class PagesController < ApplicationController
   def about
   end
 
-  def contact
+  def vacancies
   end
 end
