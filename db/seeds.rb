@@ -13,6 +13,7 @@ end
 (0..2).each do |locale|
   (0..2).each do |id|
     Movie.create!(
+      title: "Movie-#{locale}-#{id}",
       vimeo_id: locale*3+id,
       locale: LOCALES[locale],
       main: (id == 0))
