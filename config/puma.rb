@@ -1,10 +1,13 @@
-#!/usr/bin/env puma
+workers Integer(ENV['WEB_CONCURRENCY'] || 1)
+threads_count = Integer(ENV['MAX_THREADS'] || 5)
+threads threads_count, threads_count
 
-quiet
-daemonize
-threads         0, 16
-workers         1
-environment     'production'
-bind            'unix:///home/finch/tmp/sm_finch_pro.sock'
-stdout_redirect 'log/sm_finch_pro.stdout.log', 'log/sm_finch_pro.stderr.log'
 preload_app!
+
+rackup      DefaultRackup
+port        ENV['PORT']     || 3000
+environment ENV['RACK_ENV'] || 'development'
+
+on_worker_boot do
+  ActiveRecord::Base.establish_connection
+end
