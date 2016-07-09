@@ -1,4 +1,4 @@
-<% provide(:title, "Пользователь #{@user.name}") %>
+<% content_for(:title, "Пользователь #{@user.name}") %>
 <h1>Пользователь</h1>
 <p>
   <%= gravatar_image_tag(@user.email, alt: @user.name, class: 'gravatar') %>
