@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.3.0'
 
 gem 'rails', '4.2.4'
 gem 'puma'
@@ -23,6 +23,8 @@ gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'pace-rails'
 gem 'fitvidsjs_rails'
+
+gem 'cloudinary'
 
 gem 'bootstrap_form'
 gem 'gravatar_image_tag'

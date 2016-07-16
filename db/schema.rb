@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141123053847) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "movies", force: true do |t|
+  create_table "movies", force: :cascade do |t|
     t.integer  "vimeo_id"
     t.string   "locale"
     t.boolean  "main"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20141123053847) do
 
   add_index "movies", ["vimeo_id"], name: "index_movies_on_vimeo_id", unique: true, using: :btree
 
-  create_table "posts", force: true do |t|
+  create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
     t.boolean  "published"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20141123053847) do
   add_index "posts", ["title"], name: "index_posts_on_title", unique: true, using: :btree
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
-  create_table "testimonials", force: true do |t|
+  create_table "testimonials", force: :cascade do |t|
     t.integer "movie_id"
     t.text    "body"
     t.string  "author"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20141123053847) do
 
   add_index "testimonials", ["movie_id"], name: "index_testimonials_on_movie_id", using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"

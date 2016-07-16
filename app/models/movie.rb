@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Movie < ActiveRecord::Base
   has_many :testimonials
 
@@ -25,6 +27,6 @@ class Movie < ActiveRecord::Base
   scope :by_locale, -> (locale) { where(locale: locale).order(:index) }
 
   def thumbnail_id
-    thumbnail.scan(/\/(\d+)_/).last.first
+    thumbnail.scan(%r{\/(\d+)_}).last.first
   end
 end
