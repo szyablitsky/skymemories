@@ -20,17 +20,25 @@ hr
     background-size: 275px 59px
     height: 59px
     width: 275px
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi)
       background-image: image_url('logo@2x.png')
   ul
     margin-top: 39px
     list-style-type: none
     padding: 0
+
+    @media (max-width: 767px)
+      margin-top: 5px
+
     li
       font-size: 0.7em
       text-transform: uppercase
       display: inline-block
       padding: 10px 18px
+
+      @media (max-width: 767px)
+        padding: 0 18px
+
       a
         color: $header-color
         &:visited
@@ -40,6 +48,9 @@ hr
 
   hr
     margin-top: 30px
+
+    @media (max-width: 767px)
+    margin-top: inherit
 
 #page-banner
   //
