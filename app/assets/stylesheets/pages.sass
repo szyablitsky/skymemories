@@ -1,10 +1,133 @@
+@import constants
+
 #map
   height: 350px
   border-top: 1px solid gray
   border-bottom: 1px solid gray
 
-.about-photo
-  max-width: 300px
-  @media (min-width: 650px)
-    float: left
-    margin: 30px 50px 40px 0
+.about-page
+  h2
+    color: $hilight-color
+    text-align: center
+    font-size: 26px
+    margin: 60px 0 30px
+
+  p
+    text-align: center
+
+.about-banner
+  margin-top: 40px
+  margin-bottom: 60px
+  background-position: center
+
+.about-banner-gradient
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  min-height: 630px
+  color: white
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0.8) 100%)
+
+.about-banner-title
+  margin: 0 15px
+  font-size: 26px
+  text-align: center
+  line-height: 1.3em
+
+  @media (min-width: 768px)
+    font-size: 36px
+
+.about-banner-text
+  margin: 20px 15px
+  font-weight: normal
+  font-size: 12px
+  line-height: 1.5em
+  text-align: center
+
+  @media (min-width: 768px)
+    font-size: 14px
+    margin: 50px 100px
+
+.about-photo-camera
+  min-height: 200px
+  margin: 60px 0
+  background-position: center
+  background-size: cover
+
+  @media (min-width: 768px)
+    min-height: 400px
+
+.name-hilight
+  color: $header-color
+
+.about-photos
+  display: flex
+  flex-wrap: wrap
+  margin: 60px -15px
+
+.about-photo-1,
+.about-photo-2,
+.about-photo-3
+  min-width: 100px
+  min-height: 400px
+  flex: 1
+  order: 2
+  margin: 15px 15px
+  background-position: center
+  background-size: cover
+
+  @media (max-width: 767px)
+    min-height: 200px
+
+.about-photo-1
+  @media (max-width: 767px)
+    order: 1
+
+.about-photo-2
+  flex: 2
+
+  @media (max-width: 767px)
+    min-width: 280px
+    min-height: 200px
+    order: 0
+
+.about-testimonials-ruler
+  margin-top: 60px
+  margin-bottom: 60px
+
+.about-testimonial
+  display: flex
+  margin-bottom: 60px
+
+  > .avatar
+    margin: 0 40px
+    height: 110px
+    width: 110px
+    border: 8px solid white
+    border-radius: 100%
+    overflow: hidden
+
+    > img
+      width: 94px
+      height: 94px
+
+    @media (max-width: 767px)
+      display: none
+
+  > .text
+    flex: 1
+    font-size: 14px
+    line-height: 1.5em
+
+    > .author
+      color: $hilight-color
+      font-size: 20px
+      line-height: 1.5em
+
+    > .description
+      color: #898989
+      margin-bottom: 20px
+
+    > p
+      text-align: left
+      margin-bottom: 15px
