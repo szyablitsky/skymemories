@@ -18,7 +18,7 @@ ru:
     next_label: "&raquo;"
   message_notifier:
     msg:
-      subject: "Сообщение с сайта skymemories.ru"
+      subject: "Сообщение с сайта maevskypictures.ru"
   layouts:
     navbar:
       blog: Информация

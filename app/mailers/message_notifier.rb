@@ -1,5 +1,5 @@
 class MessageNotifier < ActionMailer::Base
-  default from: 'Maevsky Pictires contact form <no-reply@skymemories.ru>',
+  default from: 'Maevsky Pictires contact form <no-reply@maevskypictures.ru>',
           to: 'max@maevskypictures.ru'
 
   def msg(msg)

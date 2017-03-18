@@ -6,9 +6,9 @@ describe MessageNotifier do
     let(:mail) { MessageNotifier.msg msg }
 
     it 'renders the headers' do
-      expect(mail.subject).to eq('Сообщение с сайта skymemories.ru')
-      expect(mail.to).to eq(['info@skymemories.ru'])
-      expect(mail.from).to eq(['no-reply@skymemories.ru'])
+      expect(mail.subject).to eq('Сообщение с сайта maevskypictures.ru')
+      expect(mail.to).to eq(['max@maevskypictures.ru'])
+      expect(mail.from).to eq(['no-reply@maevskypictures.ru'])
       expect(mail.reply_to).to eq(['test@test.com'])
     end
 
