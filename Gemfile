@@ -2,20 +2,20 @@ source 'https://rubygems.org'
 
 ruby '2.4.1'
 
-gem 'rails', '4.2.4'
+gem 'rails'
 gem 'puma'
 gem 'pg'
 gem 'rails_12factor', group: :production
 
-gem 'responders', '~> 2.0'
+gem 'responders'
 
 gem 'slim-rails'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 
-gem 'sass-rails', '~> 4.0.3'
+gem 'sassc-rails'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 gem 'coffee-rails'
 
 gem 'jquery-rails'
