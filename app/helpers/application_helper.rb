@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def title(page_title)
-    base_title = 'Sky Memories'
+    base_title = 'Maevsky Pictures'
     if page_title.empty?
       base_title
     else

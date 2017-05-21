@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.4.1'
 
 gem 'rails', '4.2.4'
 gem 'puma'
@@ -37,7 +37,7 @@ gem 'will_paginate'
 gem 'newrelic_rpm'
 
 group :development do
-  gem 'i18n-debug'
+  gem 'i18n-tasks'
   gem 'brakeman'
   gem 'quiet_assets'
   gem 'better_errors'
