@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/szyablitsky/bootstrap-notify-gem.git
+  remote: https://github.com/szyablitsky/bootstrap-notify-gem.git
   revision: 196690cabd3337b9cb7418b462271f7db061c33a
   specs:
     bootstrap_notify (1.0.1)
@@ -331,7 +331,7 @@ GEM
     tins (1.6.0)
     turbolinks (2.5.3)
       coffee-rails
-    tzinfo (1.2.3)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
